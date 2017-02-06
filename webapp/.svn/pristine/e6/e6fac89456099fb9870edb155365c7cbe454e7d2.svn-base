@@ -1,0 +1,246 @@
+/*！
+*标准库 
+*date:2016-10-27
+*author: chenxuan;
+*/
+
+.banner {
+    height: 251px;
+    color: #2d586b;
+    text-indent: 30px;
+    line-height: 279px;
+    background: url(../images/source-hd-bg.jpg) center no-repeat;
+}
+
+.main {
+    padding: 30px 0;
+}
+
+.source-hd {
+    height: 49px;
+    line-height: 49px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #0068b7;
+}
+
+.source-hd>a {
+    width: 144px;
+    text-indent: 60px;
+    font-weight: bold;
+    color: #0068b7;
+    background: url(../images/sucai2.png) 25px center no-repeat;
+}
+
+.source-hd>a.current {
+    color: #fff;
+    background-image: url(../images/sucai1.png);
+    background-color: #0068b7;
+}
+
+.source-hd>.source {
+    background-image: url(../images/ziyuan2.png);
+}
+
+.source-hd>.source.current {
+    background-image: url(../images/ziyuan1.png);
+}
+
+.source-hd>.standard {
+    background-image: url(../images/biaozhun2.png);
+}
+
+.source-hd>.standard.current {
+    background-image: url(../images/biaozhun1.png);
+}
+
+.classfiy {
+    min-height: 48px;
+    margin: 30px 0;
+    background-color: #f4f4f4;
+    border: 1px solid #dedede;
+}
+
+.classfiy .name {
+    float: left;
+    margin: 16px 4px 0 30px;
+    color: #0068b7;
+    font-weight: bold;
+}
+
+.classfiy>ul {
+    float: left;
+    width: 920px;
+}
+
+.classfiy li {
+    float: left;
+    padding: 5px 16px;
+    margin-top: 11px;
+    cursor: pointer;
+}
+
+.classfiy li.selected {
+    padding: 4px 15px;
+    color: #d80000;
+    background-color: #fff;
+    border: 1px solid #d80000;
+}
+
+
+/*result*/
+
+.list>ul {
+    margin-right: -26px;
+}
+
+.list>ul .li {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    width: 314px;
+    border: 1px solid #e1e1e1
+}
+
+.list>ul .li>.height {
+    overflow: hidden;
+    margin: 0 22px;
+    height: 176px;
+    border-bottom: 1px dashed #e1e1e1;
+}
+
+.img-div {
+    width: 314px;
+    height: 205px;
+    border-bottom: 1px solid #e1e1e1
+}
+
+.show-img {
+    width: 314px;
+    height: 205px;
+}
+
+.show-info {
+    padding: 14px;
+    line-height: 20px;
+}
+
+.show-info>.name {
+    float: left;
+    width: 230px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.show-info>.download {
+    float: right;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url(../images/down-normal.png) center no-repeat;
+}
+
+.show-info>.download:hover {
+    background-image: url(../images/down-hover.png);
+}
+
+
+/*标准版*/
+
+.software-name {
+    margin: 13px 0;
+    font-size: 18px;
+    color: #0068b7;
+    line-height: 24px;
+    width: 270px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.software-brief {
+    padding: 8px 0;
+    line-height: 23px;
+    border-top: 1px dashed #e1e1e1;
+}
+
+.software-brief>p {
+    width: 270px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.software-link {
+    position: relative;
+    float: left;
+    left: 50%;
+    height:50px;
+}
+
+.software-link>ul {
+    position: relative;
+    padding: 12px 0;
+    left: -50%;
+}
+
+.software-link li {
+    float: left;
+}
+
+.software-link .twocode,
+.software-link .online,
+.software-link .download {
+    display: block;
+    width: 83px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background-color: #e5f2fb;
+    color: #0068b7;
+    border-radius: 3px;
+}
+
+.software-link .twocode {
+    margin: 0 6px;
+    cursor: pointer;
+}
+.software-link .online {
+    margin-right: 6px;
+}
+.software-link .download {
+    margin-left: 6px;
+    cursor: pointer;
+}
+.software-link .twocode>.code {
+    position: absolute;
+    display: none;
+    color: #333;
+    width: 120px;
+    margin-top: -160px;
+    margin-left: -18px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+}
+
+.software-link .twocode:hover .code {
+    display: block;
+}
+.twocode>.code .img-div {
+    width:120px;
+    height: 120px;
+}
+.twocode>.code img {
+    width:120px;
+    height: 120px;
+}
+.software-link a:hover {
+    background-color: #ffeded;
+    color: #d80000;
+}
+.software-link .download:hover {
+    background-color: #ffeded;
+    color: #d80000;
+}

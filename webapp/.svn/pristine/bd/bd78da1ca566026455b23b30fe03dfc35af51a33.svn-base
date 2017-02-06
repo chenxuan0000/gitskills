@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <title>资源库</title>
+    <script src="../../js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/lib/pagination/mricode.pagination.css',
+        './css/standard.css'
+    ]);
+    </script>
+</head>
+
+<body>
+    <!-- 头 -->
+    <div id="header" class="container header"></div>
+    <!-- 标语 -->
+    <div class="banner">
+        <div class="container">
+            此处可放置有关资源支持页面的宣传标语
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="main">
+        <div class="container" id="tabview">
+            <!-- 三大栏目分类 -->
+            <div class="source-hd clearfix" data-role="head" id="source-hd">
+                <a href="#" class="material l" data-type="002001" data-role="tab" data-target="source-a">网站素材</a>
+                <a href="#" class="source l" data-type="002002" data-role="tab" data-target="source-b">开发资源</a>
+                <a href="#" class="standard l" data-type="002003" data-role="tab" data-target="source-c">标准版</a>
+            </div>
+            <div class="source-bd" data-role="body" id="source-bd">
+                <div class="content" data-role="tab-content" data-id="source-a">
+                    <!-- 分类 -->
+                    <div class="classfiy clearfix">
+                        <span class="name">分类：</span>
+                        <ul class="select-type clearfix">
+                        </ul>
+                    </div>
+                    <!-- 列表展示 -->
+                    <div class="list">
+                        <ul class="result-ul clearfix">
+                        </ul>
+                        <div class="pager clearfix" id="pager0"></div>
+                    </div>
+                </div>
+                <div class="content" data-role="tab-content" data-id="source-b">
+                    <!-- 分类 -->
+                    <div class="classfiy clearfix">
+                        <span class="name">分类：</span>
+                        <ul class="select-type clearfix">
+                        </ul>
+                    </div>
+                    <!-- 列表展示 -->
+                    <div class="list">
+                        <ul class="result-ul clearfix">
+                        </ul>
+                        <div class="pager clearfix" id="pager1"></div>
+                    </div>
+                </div>
+                <div class="content" data-role="tab-content" data-id="source-c">
+                    <!-- 分类 -->
+                    <div class="classfiy clearfix">
+                        <span class="name">分类：</span>
+                        <ul class="select-type clearfix">
+                        </ul>
+                    </div>
+                    <!-- 列表展示 -->
+                    <div class="list">
+                        <ul class="result-ul clearfix">
+                        </ul>
+                        <div class="pager clearfix" id="pager2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾 -->
+    <div id="footer" class="footer"></div>
+    <!--模板-->
+    <script type="text/x-template" id="tmpl1">
+        <li data-type="" class="selected">全部</li>
+        {{#Info}}
+        <li data-type="{{Value}}">{{Name}}</li>
+        {{/Info}}
+    </script>
+    <script type="text/x-template" id="tmpl2">
+        {{#Info}}
+        <li class="li">
+            <div className="img-div">
+                <a href="javascript:void(0);"><img src="{{ListImgUrl}}" data-id="{{InfoGuid}}" class="show-img"></div></a>
+            <div class="show-info clearfix">
+                <span class="name">{{Title}}</span> 
+                {{#AttachUrl}}
+                <span data-id="{{AttachUrl}}" data-type="{{InfoGuid}}" class="download"></span>
+                {{/AttachUrl}}
+            </div>
+        </li>
+        {{/Info}}
+    </script>
+    <script type="text/x-template" id="tmpl3">
+        {{#Info}}
+        <li class="li">
+            <div class="height">
+                <h5 title={{Title}} class="software-name">{{Title}}</h5>
+                <div class="software-brief">
+                {{{InfoContent}}}
+                </div>
+            </div>
+            <div class="software-link">
+                <ul class="clearfix">
+                    <li>
+                        {{#TestWebUrl}}
+                        <a target="_blank" class="online" href="{{TestWebUrl}}">测试地址</a> {{/TestWebUrl}}
+                    </li>
+                    <li>
+                        {{#APPImgUrl}}
+                        <a class="twocode">
+                            <div class="code">
+                                <div class="img-div">
+                                    <img src="{{APPImgUrl}}" alt="加载图片失败">
+                                </div>
+                                <span>安装移动端产品</span>
+                            </div>
+                            二维码</a>
+                        {{/APPImgUrl}}
+                    </li>
+                </ul>
+            </div>
+        </li>
+        {{/Info}}
+    </script>
+    <script src="../../js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/lib/pagination/mricode.pagination.js',
+        'js/lib/tabview.js',
+        './js/common.js'
+    ]);
+    </script>
+</body>
+
+</html>
