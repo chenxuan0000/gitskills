@@ -1,0 +1,133 @@
+/**!
+ * [页面名称] 单个宗教隐患排查
+ * author: [chenxuan];
+ */
+ 
+ 
+/*religion的外套*/
+.religion-main {
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    z-index: 999;
+}
+
+.religion-records {
+    position: relative;
+    width: 700px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+}
+
+.religion-close {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: url(../images/close-coin.png)  no-repeat;
+}
+
+.religion-records-body {
+    margin: 20px 18px 30px 18px;
+}
+
+/*religion的detail*/
+.religion-details .right {
+    color: #999;
+    padding-left: 3px;
+}
+
+.left-detail  {
+    width: 330px;
+}
+
+.second-detail  {
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+
+.religion-title {
+    margin-bottom: 15px;
+}
+
+.religion-title span{
+    float: left;
+    font-size: 18px;
+    line-height: 30px;
+    margin-right: 6px;
+}
+
+.clique-fengge{
+    height: 18px;
+    width: 430px;
+    background: url(../images/clique-fengge.png) 0 15px repeat-x;
+}
+
+.religion-select {
+    padding: 5px 0;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e6e6e6;
+    color: #999;
+    text-align: center;
+}
+
+/* religion table */
+.religion-table {
+    margin-bottom: 13px;
+    border: 1px solid #e6e6e6;
+}
+
+.religion-table table {
+    width: 100%;
+    border: 5px solid #f5f5f5;
+}
+
+.religion-table td{
+    height: 34px;
+    line-height: 35px;
+    border: 1px solid #e6e6e6;
+}
+
+ .religion-table .second-td {
+    width: 117px;
+    color: #999;
+    text-align: right;
+}
+
+ .religion-table .three-td {
+    width: 396px;
+    text-indent: 9px;
+}
+
+.special {
+    color: #2aba27;
+}
+
+.three-td a {
+   color: #d6391c; 
+    text-decoration: underline;
+    padding-right: 18px;
+}
+
+.religion-table .rowspan4 {
+    text-align: center;
+}
+
+.religion-table .date {
+    font-size: 18px;
+    color: #666;
+}
+
+.religion-table .time {
+    font-size: 36px;
+    color: #656eaa;
+}
+
+.pager .pageGro {
+    width: 186px;
+    margin: 14px auto 34px;
+}

@@ -1,0 +1,80 @@
+﻿/*#region CheckBox 开关*/
+
+input[type="checkbox"].switch:checked,
+input[type="checkbox"].switch:not(:checked) {
+    display: none;
+}
+
+input[type="checkbox"].switch:checked + label,
+input[type="checkbox"].switch:not(:checked) + label {
+    background-color: #ff7317;
+    border-radius: 22px;
+    cursor: pointer;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 50px;
+}
+
+input[type="checkbox"].switch:checked + label:after,
+input[type="checkbox"].switch:not(:checked) + label:after {
+    background-color: #fff;
+    border-radius: 18px;
+    content: " ";
+    height: 18px;
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    -moz-transition: -moz-transform 0.3s;
+    -webkit-transition: -webkit-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+    transition: transform 0.3s;
+    width: 18px;
+}
+
+input[type="checkbox"].switch:checked + label {
+    background-color: #78a7ff;
+}
+
+input[type="checkbox"].switch:checked + label:after {
+    -webkit-transform: translateX(28px);
+    -moz-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    -o-transform: translateX(28px);
+    transform: translateX(28px);
+}
+
+input[type="checkbox"].switch:not(:checked) + label:before,
+input[type="checkbox"].switch:checked + label:before {
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: 'Microsoft YaHei';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type="checkbox"].switch:not(:checked) + label:before {
+    content: "OFF";
+    right: 5px;
+}
+
+input[type="checkbox"].switch:checked + label:before {
+    content: "ON";
+    left: 5px;
+}
+

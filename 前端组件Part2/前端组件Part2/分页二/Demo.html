@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>分页二</title>
+    <link href="../common.css" rel="stylesheet" />
+    <link href="pager/mricode.pagination.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="https://github.com/mricle/Mricode.Pagination" target="_blank" class="link">文档地址：Mricode.Paginatio</a>
+    <div class="operate_bar mt10">
+        <label>姓名：</label>
+        <input type="text" id="queryname" class="queryinput" />
+        <input type="button" value="查询" id="btnload" />
+    </div>
+    <div class="table_container">
+        <table class="common_table">
+            <thead>
+                <tr>
+                    <th style="width: 100px">学号</th>
+                    <th style="width: 120px">姓名</th>
+                    <th style="width: 100px">性别</th>
+                    <th style="width: 100px">年龄</th>
+                    <th style="width: 200px">出生日期</th>
+                    <th style="width: 200px">手机号码</th>
+                    <th>住址</th>
+                </tr>
+            </thead>
+            <tbody id="grid"></tbody>
+        </table>
+    </div>
+    <div id="pager" class="pager mt10 ">
+
+    </div>
+    <script type="text/x-template" id="dataTmpl">
+        {{#item}}
+        <tr>
+            <td>{{ID}}</td>
+            <td>{{Name}}</td>
+            <td>{{#Sex}}男{{/Sex}}{{^Sex}}女{{/Sex}}</td>
+            <td>{{Age}}</td>
+            <td>{{Birthday}}</td>
+            <td>{{PhoneNumber}}</td>
+            <td>{{Address}}</td>
+        </tr>
+        {{/item}}
+    </script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="mustache.js"></script>
+    <script src="mockjax/jquery.mockjax.js"></script>
+    <script src="mackjaxtest.js"></script>
+    <script src="pager/mricode.pagination.js"></script>
+    <script>
+        $(function () {
+            var $grid = $("#grid");
+
+            var M = Mustache,
+                dataTmpl = $("#dataTmpl").html();
+
+            $("#pager").pagination({
+                pageSize: 10,
+                remote: {
+                    url: "_test/getData",
+                    success: function (data) {
+                        console.log(data);
+                        $grid.html(M.render(dataTmpl, { item: data.records }));
+                    },
+                    totalName: 'total',
+                    pageParams: function (data) {
+                        return {
+                            pageIndex: data.pageIndex,
+                            pageSize: data.pageSize
+                        };
+                    }
+                },
+                showInfo: true,
+                showJump: true,
+                infoFormat: "{start}到{end}条, 共{total}条数据 ",
+                showPageSizes: true
+            });
+            $("#btnload").on("click", function () {
+                $("#pager").pagination('setParams', { name: $("#queryname").val() });
+                $("#pager").pagination('remote');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/**!
+ * [页面名称]:党员属性及周边党员查询
+ * author: [chenxuan];
+ */
+
+.clique-info-search {
+    overflow: hidden;
+    width: 580px;
+    height: 800px;
+    background-color: #fff;
+}
+
+.search-body {
+    margin: 10px 25px 37px 25px;
+}
+
+.clique-hd a {
+    color: #666;
+    font-weight: bold;
+    line-height: 30px;
+    margin-right: 25px;
+    outline: none;
+}
+
+a.cur {
+    color: #656eaa;
+    border-bottom: 3px solid #656eaa;
+}
+
+.clique-hd {
+    height: 32px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 12px;
+}
+
+.search-body table {
+    width: 530px;
+}
+
+
+/* 党员属性表 */
+
+.first-table1 td,
+.first-table1 tr {
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #e6e6e6;
+}
+
+.first-td1 {
+    width: 115px!important;
+    background-color: #fafafa;
+    color: #c0c0c0;
+    text-align: right;
+}
+
+.second-td1 {
+    width: 180px;
+    text-indent: 9px;
+}
+
+.three-td1 {
+    width: 117px;
+    text-indent: 9px;
+}
+
+.clospan3 {
+    text-indent: 9px;
+}
+
+
+/* 周边党员查询表 */
+
+.second-table th,
+.second-table td {
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #e6e6e6;
+}
+
+.second-table th {
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.second-table td {
+    color: #666;
+}
+
+.first-th {
+    width: 100px;
+}
+
+.two-th {
+    width: 195px;
+}
+
+.three-th {
+    width: 185px;
+}
+
+.four-th {
+    width: 50px;
+}
+
+.second-table a {
+    display: block;
+    width: 50px;
+    height: 34px;
+    background: url(../images/info-detailpic.png);
+}
+
+.pl10 {
+    text-indent: 10px;
+}
+
+.pl6 {
+    text-indent: 6px;
+}
+
+.middle {
+    text-align: center;
+}
+
+
+/* search block */
+
+.search-block {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 18px;
+}
+
+.select-input {
+    width: 113px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e6e6e6;
+    color: #999;
+}
+
+.search-input {
+    width: 342px;
+    height: 28px;
+    line-height: 30px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+    color: #999;
+    padding-left: 6px;
+}
+
+
+/* 指定placeholder文字颜色 */
+
+.placeholder {
+    color: #f5f5f5;
+}
+
+.search-wrap {
+    margin-left: 120px;
+}
+
+.btn-search {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 50px;
+    height: 30px;
+    background-color: #656eaa;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+.pager .pageGro {
+    width: 186px;
+    margin: 14px auto 34px;
+}

@@ -1,0 +1,26 @@
+﻿.mt10
+{
+    margin-top: 10px;
+}
+
+.link
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+}
+
+.txt-date
+{
+    border: 1px solid #d2d2d2;
+    border-radius: 2px;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 10px;
+    vertical-align: top;
+    width: 168px;
+    background: url("images/calendar.png") no-repeat scroll 125px center;
+}

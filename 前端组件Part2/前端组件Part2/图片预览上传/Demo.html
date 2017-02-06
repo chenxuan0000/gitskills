@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>图片上传预览</title>
+    <link href="../common.css" rel="stylesheet" />
+    <link href="webuploader/webuploader.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="http://fex.baidu.com/webuploader/" target="_blank" class="link">文档地址：WebUploader</a>
+
+    <div class="container">
+        <div class="row mt10">
+            <div class="file-uploader">
+                <div id="filePicker">选择图片</div>
+            </div>
+            <div class="file-process">
+                <span class="file-name"></span>
+                <span class="file-size"></span>
+                <div class="uploader-process">
+                    <div class="process-inner"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt10">
+            <ul id="imglist" class="img-list"></ul>
+        </div>
+        <div class="row mt10">
+            <ul id="filelist" class="file-list"></ul>
+        </div>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="webuploader/webuploader.min.js"></script>
+    <script>
+        $(function () {
+            // 初始化Web Uploader
+
+            var $process = $(".file-process"),
+                $filename = $(".file-name", $process),
+                $filesize = $(".file-size", $process),
+                $fileprocess = $(".process-inner", $process),
+                imglist = $("#imglist"),
+                $filelist = $("#filelist");
+            var allowType = ['gif', 'jpg', 'jpeg', 'bmp', 'png'];
+
+            var uploader = WebUploader.create({
+                auto: true,
+                swf: "webuploader/Uploader.swf",
+                server: "http://192.168.118.34:9002/Sample/Uploader",  //上传服务器URL
+                pick: {
+                    id: '#filePicker',
+                    multiple: false
+                },
+                thumb:{
+                    width: 110,
+                    height: 110,// 是否允许裁剪。
+                    crop: false
+                },
+                accept: {
+                    extensions: allowType.join(",")
+                },
+                duplicate: true
+            });
+            uploader.on('fileQueued', function (file) {
+
+                uploader.makeThumb(file, function (error, ret) {
+                    if (error) {
+                        //alert('预览错误');
+                    } else {
+                        var $li = $("<li/>").append($("<img/>").attr("src", ret));
+                        imglist.append($li);
+                    }
+                });
+
+            });
+            uploader.on('beforeFileQueued', function (file) {
+                var ext = file.name.substr(file.name.lastIndexOf(".") + 1).toLowerCase(),
+                    size = file.size;
+                if ($.inArray(ext, allowType) == -1) {
+                    alert("选择的格式不正确");
+                    return false;
+                }
+                if (size > 5 * 1024 * 1024) {
+                    alert("文件大小需小于5M");
+                    return false;
+                }
+            });
+
+            uploader.on('uploadStart', function (file) {
+                $filename.html(file.name);
+                $filesize.html(WebUploader.Base.formatSize(file.size, 0, ['B', 'KB']));
+                $process.show();
+            });
+
+
+            uploader.on('uploadProgress', function (file, percentage) {
+                $fileprocess.css('width', percentage * 100 + '%');
+            });
+
+            uploader.on('uploadSuccess', function (file, data) {
+                $filelist.append("<li><a href=" + data.href + " target='_blank'>" + file.name + "</a></li>");
+            });
+
+            uploader.on('uploadError', function (file) { alert('上传失败！'); });
+
+            uploader.on('uploadComplete', function (file) {
+                setTimeout(function () {
+                    $process.hide();
+                    $fileprocess.width(0);
+                }, 1000);
+            });
+
+        })
+
+    </script>
+</body>
+</html>
