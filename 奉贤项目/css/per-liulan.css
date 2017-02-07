@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+.con-r{width: 845px;}
+.h3{font-size: 20px;color:#47abd5;margin-bottom: 10px;font-weight: normal;}
+.detail-wrap{border:1px solid #d9d9d9;padding:20px;width:805px;	margin-bottom: 30px;}
+.detail-wrap ul li{border-bottom:1px solid #d9d9d9;padding-bottom:20px;margin-bottom: 10px;clear:both;}
+
+
+.li-l img{width: 194px;height: 111px;}
+.li-r{width: 590px;}
+.tit{font-size: 20px;color:#333;line-height: 40px;}
+p.text{color:#808080;font-size: 16px;line-height: 25px;height: 75px;overflow:hidden;}
+.tit span{font-size: 14px;padding-left: 50px;}
+span.span1{color:#47abd5;background:url(../images/per_icon3.png) no-repeat center;}
+span.span2{color:#999999;background:url(../images/per_icon4.png) no-repeat center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

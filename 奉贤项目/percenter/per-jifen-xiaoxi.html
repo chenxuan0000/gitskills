@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <title>个人中心-积分消息</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../js/layer/skin/layer.css">
+    <link rel="stylesheet" href="../pager/mricode.pagination.css">
+    <link rel="stylesheet" href="../css/per-jifen-xiaoxi.css">
+    <script src="../js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="maincontent auto clearfix">
+        <div class="pos-nav">
+            <a href="#">首页</a>&nbsp;&nbsp; &raquo;&nbsp;&nbsp;消息中心
+        </div>
+        <div class="con-r fr">
+            <div class="detail-wrap">
+                <ul id="msg-list" class="clearfix">
+                </ul>
+                <div class="pagelist" id="pager">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <!-- 消息列表 -->
+    <script type="text/template" id="template">
+        {{#rows}}
+        <li>
+            <div class="tit clearfix">
+                <a class="fl">{{Title}}</a>
+                <span class="date fr">{{Time}}</span>
+            </div>
+            <p class="detail">{{Conten}}</p>
+        </li>
+        {{/rows}}
+    </script>
+    <script type="text/javascript" src="../js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="../js/mustache.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../pager/mricode.pagination.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/my-msg.js"></script>
+</body>
+
+</html>

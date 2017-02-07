@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.top-info{height: 80px;padding:10px 10px;width:1002px;background:#f2f2f2;margin:20px 0;}
+.top-info .left{width: 170px;height: 80px;}
+.top-info .left img{width: 170px;height: 80px;}
+.top-info .right{width: 820px;}
+.top-info .right .tit{font-size: 20px;color:#333;}
+.contact .group{margin-top: 5px;}
+.contact span{padding-left: 30px;font-size: 14px;color:#808080;height: 25px;display: block;}
+.contact .address{background:url(../images/icon_26.png) no-repeat 0 0;}
+.contact .phone{background:url(../images/icon_26.png) no-repeat 0 -57px;}
+
+.form{padding-bottom:40px;margin-top: 35px;}
+.form .row{margin-bottom: 30px;}
+.l-txt{font-size: 16px;color:#333333;  vertical-align: top;margin-right: 10px;}
+.form .detail{width: 933px;height: 178px;border:1px solid #b3b3b3;resize:none;    padding: 5px;}
+
+.btn-bg1{background: #ff7533;color:#fff;float: right;width: 86px;height: 30px;line-height: 30px;font-size: 14px;text-align: center;}
+
+/**星星***/
+
+
+#xzw_starBox{position:relative;width:120px;float:left}
+/**/
+#xzw_starSys .description{clear:both;padding:10px 0px}
+#xzw_starSys .star{height:20px;width:120px;position:relative;background:url(../images/pingfen.png) repeat-x;cursor:pointer}
+#xzw_starSys .star li{float:left;padding:0px;margin:0px}
+#xzw_starSys .star li a{display:block;width:24px;height:20px;overflow:hidden;text-indent:-9999px;position:absolute;z-index:5}
+#xzw_starSys .star li a:hover{background:url(../images/pingfen.png) 0 -25px repeat-x;z-index:3;left:0}
+#xzw_starSys .star a.one-star{left:0}
+#xzw_starSys .star a.one-star:hover{width:24px}
+#xzw_starSys .star a.two-stars{left:24px}
+#xzw_starSys .star a.two-stars:hover{width:48px}
+#xzw_starSys .star a.three-stars{left:48px}
+#xzw_starSys .star a.three-stars:hover{width:72px}
+#xzw_starSys .star a.four-stars{left:72px}
+#xzw_starSys .star a.four-stars:hover{width:96px}
+#xzw_starSys .star a.five-stars{left:96px}
+#xzw_starSys .star a.five-stars:hover{width:120px}
+#xzw_starSys .current-rating{background:url(../images/pingfen.png) 0 -25px repeat-x;position:absolute;height:20px;z-index:1;top:0;left:0}
+
+
+
+

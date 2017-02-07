@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***搜索页****/
+
+.search-text{font-size: 20px;color:#47abd5;border-bottom:1px solid #d9d9d9;padding-bottom: 10px;}
+.search-text img{width: 33px;height: 33px;  vertical-align: middle;margin-right: 5px;}
+
+
+
+
+
+
+.news-list{margin-top: 15px;}
+.news-list ul li{border-bottom:1px solid #d9d9d9;padding:20px 0;}
+.news-list ul li .tit{}
+.news-list ul li .tit h4{font-size: 20px;color:#333333;font-weight: normal;float: left;margin-bottom: 10px;}
+.news-list ul li .tit span.this{color:#ff3737;}
+.news-list ul li .tit span.rig{font-size: 14px;color:#999999;display: block;float: right;background:url(../images/icon_22.png) no-repeat left center;padding-left: 20px;}
+.left-img{width: 195px;height: 110px;}
+.left-img img{width: 195px;height: 110px;}
+.news-list ul li .detail{width: 815px;height: 110px;}
+.right-text p{width: 815px;font-size: 16px;color:#808080;line-height: 25px;clear:both;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

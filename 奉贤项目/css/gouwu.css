@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***新闻列表页****/
+.news-banner img{width: 1022px;}
+
+.public-top{height: 50px;border-bottom:1px solid #d9d9d9;}
+.public-h3{font-weight: normal;font-size: 20px;color:#47abd5;margin-right: 100px;}
+.public-h3 img{  vertical-align: bottom;margin-right: 10px;}
+.right-select{width: 200px;height: 35px;border:1px solid #d9d9d9;border-radius:5px;}
+.right-select select{width: 200px;height: 35px;border:none;font-size: 14px;color:#333;border-radius:5px;padding-left: 10px;appearance:none;-webkit-appearance:none;background:url(../images/select_icon.png) no-repeat 175px center;line-height:35px;}
+
+
+
+.list-wrap>ul{margin-left: -10px;margin-top: 10px;}
+.list-wrap>ul>li{width: 248px;height: 265px;background:#f2f2f2;color:#333;float: left;margin-left: 10px;margin-top: 10px;}
+.list-wrap>ul>li img{width: 248px;height: 150px;}
+
+.list-wrap>ul>li p{font-size: 16px;line-height: 45px;margin-left: 10px;}
+.list-wrap>ul>li span{font-size: 14px;display: block;margin-top: 10px;margin-left: 10px;}
+.xing{margin-left: 10px;}
+.xing li{background:url(../images/xing_huang.png) no-repeat -20px center;width:20px;height: 20px;float: left;   }
+.xing li.cur{background:url(../images/xing_huang.png) no-repeat 0 center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
