@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link href="../common.css" rel="stylesheet" />
+    <link href="layer/skin/layer.ext.css" rel="stylesheet" />
+    <link href="Style.css" rel="stylesheet" />
+    <title>弹窗</title>
+</head>
+
+<body>
+    <a href="http://layer.layui.com/api.html" target="_blank" class="link">文档地址：Layer</a>
+    <div class="ml20">
+        <input type="button" value="弹出页" id="Iframe" />
+        <input type="button" value="提示框" id="Alert" />
+        <input type="button" value="确认框" id="Confirm" />
+        <input type="button" value="输入框" id="Prompt" />
+        <p>PS：对layer进行自定义皮肤，参考skin/web/customs.css
+            <br />更完整的Demo请参考官网</p>
+    </div>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <script src="layer/extend/layer.ext.js"></script>
+    <script>
+    $(function() {
+        layer.config({
+            extend: ['skin/web/custom.css']
+        });
+        $("#Iframe").click(function() {
+            layer.open({
+                type: 2,
+                title: "订阅提醒设置",
+                area: ['575px', '800px'],
+                content: ['index.html'],
+                skin: 'layer-ext-subscribe'
+            });
+        })
+        $("#Confirm").click(function() {
+            layer.confirm("<p class='confirm-sub-title'>确定注销本订阅号？</p><p class='confirm-sub-content'>注销后的订阅号及其内容将被清除</p>", {
+                title: "操作确认",
+                icon: 3,
+                area: ['480px', ""],
+                btn: ['确定', '取消'],
+                skin: 'layer-ext-confirm'
+            }, function() {
+                alert("确认");
+            }, function() {
+
+            })
+        })
+        $("#Prompt").click(function() {
+            layer.prompt({
+                content: "<p class='confirm-sub-title'>注销理由：</p><textarea class='layui-layer-input'></textarea><p class='confirm-sub-content'>注销后的订阅号及其内容将被清除</p>",
+                formType: 2,
+                title: "操作确认",
+                area: ['480px', ""],
+                skin: 'layer-ext-confirm'
+            }, function(value, index, elem) {
+                alert(value);
+            })
+        })
+        $("#Alert").click(function() {
+            layer.alert("上传图片大小不能超过5M", {
+                title: "提示信息",
+                icon: 0,
+                area: ['370px', ""],
+                skin: 'layer-ext-alert'
+            })
+        })
+    })
+    </script>
+</body>
+
+</html>

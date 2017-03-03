@@ -1,0 +1,227 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.operate_bar {
+    padding: 10px;
+    background: #f3f3f3;
+}
+/*#region 按钮*/
+input[type=button] {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 3px 15px;
+    outline: none;
+    border: 1px solid #63a62f;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background: -moz-linear-gradient(top,#7fbf4d,#63a62f);
+    background: -ms-linear-gradient(top,#7fbf4d 0%,#63a62f 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
+    background: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+    background: linear-gradient(top, #7fbf4d, #63a62f);
+    -moz-box-shadow: inset 0 1px 0 0 #9ed276;
+    -webkit-box-shadow: inset 0 1px 0 0 #9ed276;
+    box-shadow: inset 0 1px 0 0 #9ed276;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    font: 15px "Microsoft Yahei";
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=true，GradientType:0,startColorstr='#7fbf4d', endColorstr='#63a62f');
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background: -moz-linear-gradient(top,#75b544,#5b9a2b);
+    background: -ms-linear-gradient(top,#75b544 0%,#5b9a2b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #75b544), color-stop(100%, #5b9a2b));
+    background: -webkit-linear-gradient(top, #75b544, #5b9a2b);
+    background: linear-gradient(top, #75b544, #5b9a2b);
+    -moz-box-shadow: inset 0 1px 0 0 #96ca6e;
+    -webkit-box-shadow: inset 0 1px 0 0 #5b9a2b;
+    box-shadow: inset 0 1px 0 0 #96ca6e;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=true，GradientType:0,startColorstr='#75b544', endColorstr='#5b9a2b');
+}
+
+.btn_common {
+    display: inline-block;
+    padding: 1px 8px;
+    outline: none;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    font: 13px "Microsoft Yahei";
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.btn_delete {
+    background-color: #da4f49;
+    border: 1px solid #d04842;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2605a), color-stop(100%, #d54a44));
+    background: -webkit-linear-gradient(top, #e2605a, #d54a44);
+    background: linear-gradient(top, #e2605a, #d54a44);
+    background: -moz-linear-gradient(top, #e2605a, #d54a44);
+    -webkit-box-shadow: inset 0 1px 0 0 #f2a4a0;
+    -moz-box-shadow: inset 0 1px 0 0 #f2a4a0;
+    box-shadow: inset 0 1px 0 0 #f2a4a0;
+}
+
+.btn_edit {
+    background: #76b347;
+    border: 1px solid #63a62f;
+    border-bottom: 1px solid #5b992b;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
+    background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: linear-gradient(top, #7fbf4d, #63a62f);
+    background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+    -webkit-box-shadow: inset 0 1px 0 0 #9ed276;
+    -moz-box-shadow: inset 0 1px 0 0 #9ed276;
+    box-shadow: inset 0 1px 0 0 #9ed276;
+}
+
+.btn_save, .btn_cancel {
+    background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+    color: #444;
+    margin: 0 1px 0 0;
+    outline: none;
+    text-shadow: 0 1px 0 rgb(240, 240, 240);
+    height: 24px;
+    padding: 1px 10px;
+    cursor: pointer;
+}
+
+.btn_cancel {
+    border-color: rgba(0, 0, 0, 0.25);
+}
+/*#endregion*/
+
+/*#region 表格*/
+.table_container { /*padding: 0 10px;*/
+}
+
+.common_table {
+    width: 100%;
+    border: 1px solid #817e7e;
+    overflow: hidden;
+    border-collapse: collapse;
+    color: #2f2f2f;
+    table-layout: fixed;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -ms-word-break: break-all;
+    -ms-word-break: keep-all;
+    word-break: break-all;
+    word-break: keep-all;
+    font-size: 14px; /* 不换行 */ /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/ /* 换行 */ /* 内容超出宽度时隐藏超出部分的内容 */
+}
+
+.common_table thead {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.common_table tbody {
+    width: 100%;
+}
+
+.common_table thead tr th {
+    overflow: hidden;
+    height: 34px;
+    border: 1px solid #cdcdcd;
+    background-image: -webkit-gradient(top, #f6f6f6, #e6e6e6);
+    background-image: -webkit-linear-gradient(top, #f6f6f6, #e6e6e6);
+    background-image: linear-gradient(top, #f6f6f6, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #f6f6f6, #e6e6e6);
+    background: -ms-linear-gradient(top, #f6f6f6, #e6e6e6);
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    font: bolder 16px "Microsoft Yahei";
+}
+
+.common_table tbody tr td {
+    overflow: hidden;
+    height: 29px;
+    border: 1px solid #dddddd;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    font: 14px "Microsoft Yahei";
+    cursor: pointer;
+}
+
+.common_table tbody tr:nth-child(odd) {
+    background-color: #f6f6f6;
+}
+
+.common_table tbody tr:hover {
+    background-color: #eef8fc;
+}
+/*#endregion*/
+
+
+
+ .queryinput {
+    border: 1px solid #d8d8d8; 
+    -moz-box-shadow: 2px 3px 3px #f6f8f9 inset;
+    -webkit-box-shadow: 2px 3px 3px #f6f8f9 inset;
+    box-shadow: 2px 3px 3px #f6f8f9 inset;
+    font-size: 12px;
+    height: 26px;
+    outline: medium none;
+    padding: 1px 8px;
+    -moz-transition: background-color, color, width, border-color 0.5s;
+    -o-transition: background-color, color, width, border-color 0.5s;
+    -webkit-transition: background-color, color, width, border-color 0.5s;
+    transition: background-color, color, width, border-color 0.5s;
+    width: 200px;
+    display: inline-block;
+}
+
+
+.queryinput:hover {
+    border-color: #ababab #ccc #ccc #ababab;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.queryinput:focus {
+    border: 1px solid #377bcb;
+}
+
+.pager{
+    overflow:hidden;
+    float:right;
+    text-align:center;
+}

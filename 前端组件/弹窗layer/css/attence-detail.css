@@ -1,0 +1,147 @@
+/**!
+ * [页面名称] 考勤详情
+ * author: [陈轩];
+ */
+ 
+/*attence的外套*/
+.attence-main {
+    position: absolute;
+    top: 60px;
+    right: 140px;
+    z-index: 999;
+}
+
+.attence-detail {
+    position: relative;
+    width: 700px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+}
+
+.attence-close {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    z-index: 999;
+    cursor: pointer;
+    background: url(../images/religion-close.png) 3px 3px no-repeat;
+}
+
+.attence-min {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 9px;
+    right: 50px;
+    z-index: 999;
+    cursor: pointer;
+    background: url(../images/religion-min.png) 3px 10px no-repeat;
+}
+
+.attence-body {
+    margin: 18px 18px 32px 18px;
+}
+
+/* attence-title */
+.attence-title .title {
+    font-size: 18px;
+    line-height: 30px;
+    margin-right: 6px;
+}
+
+.attence-title .to {
+    line-height: 30px;
+    color: #999;
+    b
+}
+
+.attence-select {
+    padding: 6px 0;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e6e6e6;
+    color: #999;
+    text-align: center;
+    margin: 0 3px;
+}
+
+.attence-search {
+    width: 50px;
+    height: 30px;
+    margin-left: 4px;
+    background-color: #656eaa;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+}
+
+.attence-title {
+    position: relative;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.attence-fengge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 30px;
+    width: 255px;
+    z-index: 900;
+    background: url(../images/clique-fengge.png) 0 15px repeat-x;
+}
+
+/* attence-table */
+.attence-table th,
+.attence-table td {
+     border: 1px solid #e6e6e6;
+     text-align: center;
+}
+
+.attence-table th {
+    background-color: #f0f0f0;
+}
+
+.attence-table .first-th {
+    width: 52px;
+}
+
+.attence-table .two-th {
+    width: 166px;
+}
+
+.attence-table .three-th {
+    width: 185px;
+}
+
+.attence-table .second-th {
+    width: 58px;
+    height: 32px;
+    background-color: #fafafa;
+}
+
+.attence-table td,
+.attence-table .four-th {
+    height: 32px;
+}
+
+.color-one {
+    color: #666;
+}
+
+.color-two {
+    color: #2ec7c9;
+}
+
+.color-three {
+    color: #d6391c;
+}
+
+.pager .pageGro {
+    width: 186px;
+    margin: 14px auto 34px;
+}

@@ -1,0 +1,169 @@
+.gj-grid-wrapper {
+    margin: auto;
+    position: relative;
+    clear: both;
+}
+
+.gj-grid-table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.gj-grid-table thead th.gj-grid-sort {
+    cursor: pointer;
+}
+
+.gj-grid-sort-icon {
+    display: inline-block;
+    width: 10px;
+    height: 100%;
+    vertical-align: middle;
+    margin-left: 5px;
+    background: url("icon.png") no-repeat 0 center;
+}
+
+.gj-grid-sort-icon.asc {
+    background-position: -12px center;
+}
+
+.gj-grid-sort-icon.desc {
+    background-position: -24px center;
+}
+
+.gj-grid-table thead th #checkAllBoxes {
+    margin: auto;
+}
+
+.gj-grid-table > tbody > tr > td {
+    cursor: default;
+    overflow: hidden;
+}
+
+.gj-grid-table tfoot {
+    line-height: 30px;
+    font: 14px "Microsoft YaHei";
+    color: #666;
+}
+
+.gj-grid-table tfoot .gj-pager-nav {
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+    line-height: 30px;
+}
+
+.gj-grid-table tfoot .gj-grid-pager-disabled {
+    color: #ccc;
+}
+
+.gj-grid-table tfoot .gj-pager-nav:hover {
+    background: #157cbf;
+    color: #fff;
+}
+
+.gj-grid-table tfoot .gj-pager-nav.gj-grid-pager-disabled:hover {
+    cursor: not-allowed;
+    background: #fff;
+    color:#ccc;
+}
+
+.gj-grid-wrapper TABLE.gj-grid-table DIV {
+    vertical-align: middle;
+    text-indent: 0;
+    display: inline-block;
+}
+
+.gj-grid-wrapper DIV.gj-grid-loading-cover {
+    background: #bbb;
+    opacity: 0.5;
+    position: absolute;
+    vertical-align: middle;
+}
+
+.gj-grid-wrapper DIV.gj-grid-loading-text {
+    position: absolute;
+    font-weight: bold;
+}
+
+.gj-dirty {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #f00 transparent transparent #f00;
+    padding: 0;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+/* JQuery UI Section */
+
+.gj-grid-wrapper div.gj-grid-ui-toolbar {
+    border-top: 1px solid menutext;
+    border-left: 1px solid menutext;
+    border-right: 1px solid menutext;
+    border-bottom: 0;
+    padding: 2px;
+}
+
+.gj-grid-ui-table {
+    padding: 0;
+}
+
+.gj-grid-ui-table thead tr th.gj-grid-ui-thead-th {
+    height: 42px;
+    line-height: 42px;
+    padding: 0;
+    white-space: normal;
+    vertical-align: middle;
+    text-align: center;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    background: #e0e3ed;
+    color: #3e526f;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.gj-grid-ui-table thead tr th div {
+    padding: 2px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.gj-grid-ui-table thead tr th span.gj-grid-ui-thead-th-sort-icon {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.gj-grid-ui-table tbody {
+    border-bottom: 1px solid #f4f5f8;
+}
+
+.gj-grid-ui-table tbody tr.gj-grid-row-default {
+    line-height: 42px;
+    color: #3e526f;
+    background: #fff;
+}
+
+.gj-grid-ui-table tbody tr.gj-grid-row-default.even {
+    background: #f4f5f8;
+}
+
+.gj-grid-ui-table tbody tr.gj-grid-row-active {
+    background: #fef9e4 !important;
+}
+
+.gj-grid-ui-table tbody tr:hover {
+    background: #f3fafe;
+}
+
+.gj-grid-ui-table > tbody > tr > td {
+    padding: 0;
+    height: 42px;
+}

@@ -1,0 +1,51 @@
+
+.ml5 {
+    margin-left: 5px;
+}
+/*分页*/
+.pageGro {
+    width: 186px;
+    margin: 10px auto 0;
+}
+
+#pageGro div {
+    font-size: 12px;
+    color: #333;
+    line-height: 23px;
+    float: left;
+}
+
+#pageGro div ul li {
+    font-size: 12px;
+    color: #666;
+    line-height: 23px;
+    float: left;
+    margin-left: 5px;
+}
+
+#pageGro div ul li {
+    width: 22px;
+    text-align: center;
+    border: 1px solid #666;
+    cursor: pointer;
+}
+
+#pageGro div ul li.on {
+    color: #fff;
+    background: #3c90d9;
+    border: 1px solid #3c90d9;
+}
+
+#pageGro .pageUp,
+#pageGro .pageDown {
+    width: 45px;
+    text-align: center;
+    border: 1px solid #666;
+    cursor: pointer;
+}
+
+#pageGro .pageUp.unable,
+#pageGro .pageDown.unable {
+    color: #999;
+    border-color: #999;
+}

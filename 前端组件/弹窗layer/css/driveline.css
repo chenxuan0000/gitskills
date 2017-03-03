@@ -1,0 +1,155 @@
+/**!
+ * [页面名称]:驾车线路查询
+ * author: [chenxuan];
+ */
+
+.driveline {
+    position: absolute;
+    top: 130px;
+    left: 200px;
+    width: 450px;
+    border: 1px solid #e6e6e6;
+}
+
+.driveline-close {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
+    background: url(../images/close-coin.png) no-repeat;
+}
+
+.line-main {
+    padding: 15px 0 10px 0;
+    margin: 0 15px;
+    background-color: #fff;
+}
+
+.line-main .title {
+    height: 20px;
+    background: url(../images/clique-fengge.png) left 50% repeat-x;
+}
+
+.title span {
+    padding-right: 12px;
+    font-size: 18px;
+    background-color: #fff;
+}
+
+/*line-bd*/
+.line-bd {
+    margin: 24px 5px 12px 5px;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.line-bd .pos {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 33px;
+    color: #0068b7;
+    border: 1px solid #0068b7;
+    border-radius: 15px;
+    background: url(../images/pos1-img.png) 15px 6px no-repeat;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.line-bd .special {
+    color: #ff8400;
+    border-color: #ff8400;
+    background-image: url(../images/pos2-img.png);
+}
+
+.line-bd .dot {
+    display: inline-block;
+    margin-left: 40px;
+    padding-left: 22px;
+    color: #0068b7;
+    text-decoration: underline;
+    cursor: pointer;
+    background: url(../images/dot1-pic.png) left 50% no-repeat;
+}
+
+.line-bd .type2 {
+    color: #ff8400;
+    background-image: url(../images/dot2-pic.png);
+}
+
+.line-bd .has {
+    display: inline-block;
+    margin-left: 45px;
+    padding-left: 24px;
+    cursor: pointer;
+    background: url(../images/no-checked.png) left 50% no-repeat;
+}
+
+.line-bd .checked {
+    background-image: url(../images/has-checked.png);
+}
+
+.searchbtn {
+    display: block;
+    width: 116px;
+    height: 36px;
+    margin: 15px auto 12px auto;
+    font-family: Microsoft YaHei;
+    color: #656eaa;
+    font-size: 15px;
+    background-color: #e6f0fd;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* line-result */
+.line-result {
+    margin: 0 5px;
+}
+
+.distance {
+    line-height: 30px;
+    width: 100%;
+    margin: 0 auto;
+    text-indent: 1em;
+    background-color: #e6f0fd;
+    border-radius: 3px;
+}
+
+.detail .line {
+    height: 38px;
+    line-height: 38px;
+    color: #666;
+    border-bottom: 1px solid #e6e6e6;
+    padding-left: 26px;
+    background: url(../images/dot1-pic.png) 2px 50% no-repeat;
+}
+
+.detail .start-dot {
+    color: #0068b7;
+}
+
+.detail .end-dot {
+    color: #ff8400;
+    background-image: url(../images/dot2-pic.png);
+    border-bottom: 0;
+}
+
+.detail .zhixing {
+    background-image: url(../images/zhixing.png);
+}
+
+.detail .right {
+    background-image: url(../images/turn-right.png);
+}
+
+.detail .left {
+    background-image: url(../images/turn-left.png);
+}

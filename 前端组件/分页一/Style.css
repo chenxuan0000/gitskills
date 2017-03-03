@@ -1,0 +1,88 @@
+.title
+{
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.table_container
+{
+}
+
+.common_table
+{
+    width: 100%;
+    border: 1px solid #817e7e;
+    overflow: hidden;
+    border-collapse: collapse;
+    color: #2f2f2f;
+    table-layout: fixed;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -ms-word-break: break-all;
+    -ms-word-break: keep-all;
+    word-break: break-all;
+    word-break: keep-all;
+    font-size: 14px; /* 不换行 */ /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/ /* 换行 */ /* 内容超出宽度时隐藏超出部分的内容 */
+}
+
+.common_table thead
+{
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.common_table tbody
+{
+    width: 100%;
+}
+
+.common_table thead tr th
+{
+    overflow: hidden;
+    height: 34px;
+    border: 1px solid #cdcdcd;
+    background-image: -webkit-gradient(top, #f6f6f6, #e6e6e6);
+    background-image: -webkit-linear-gradient(top, #f6f6f6, #e6e6e6);
+    background-image: linear-gradient(top, #f6f6f6, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #f6f6f6, #e6e6e6);
+    background: -ms-linear-gradient(top, #f6f6f6, #e6e6e6);
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    font: bolder 16px "Microsoft Yahei";
+}
+
+.common_table tbody tr td
+{
+    overflow: hidden;
+    height: 29px;
+    border: 1px solid #dddddd;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    font: 14px "Microsoft Yahei";
+    cursor: pointer;
+}
+
+.common_table tbody tr:nth-child(odd)
+{
+    background-color: #f6f6f6;
+}
+
+.common_table tbody tr:hover
+{
+    background-color: #eef8fc;
+}
