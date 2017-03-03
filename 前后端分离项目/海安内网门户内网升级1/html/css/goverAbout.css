@@ -1,0 +1,47 @@
+/**!
+ * [页面名称]:海安项目登录页
+ * author: [chenxuan];
+ */
+ .block {
+    display: block;
+}
+
+.wb-tree {
+    margin-left: 6px;
+    overflow: auto;
+}
+.wb-tree-items {
+    margin-left: 8px;
+}
+.wb-tree-node {
+    border: 1px solid #eee;
+}
+.wb-tree-node a {
+    border: 0;
+}
+.wb-tree-item > a, .wb-tree-tt {
+    width: 130px;
+}
+.wb-tree-tt.special {
+    font-size: 14px;
+}
+.special .wb-tree-node,
+.special .wb-tree-sub a {
+    height: 32px;
+    line-height: 32px;
+}
+ .wb-tree-iconl {
+    height: 32px;
+    margin-right: 10px;
+ }
+
+.wb-tree-iconr {
+    float: left;
+    height: 12px;
+    margin-top: 11px;
+}
+
+.wb-tree-node, .wb-tree-sub a {
+    height: 32px;
+    line-height: 32px;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="pager/mricode.pagination.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/goverAbout.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <title>海安县政务网</title>
+</head>
+
+<body>
+    <div style="z-index: 10000;position:absolute;left:0;top:0;width:100%;height: 100%;background-color: white" id="topdiv"></div>
+    <!-- header -->
+    <div class="ewb-container">
+        <!-- banner -->
+        <div class="ewb-header">
+            <img src="images/head.jpg" alt="" title="海安县政务网">
+        </div>
+        <!-- nav -->
+        <div class="ewb-container">
+            <ul class="ewb-nav clearfix" id="ewb-nav">
+                <li class="ewb-nav-li first">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="haianstate">海安动态</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="deptstate">部门动态</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="notice2">通知公告</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="goverAbout.html">政务文件</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="innerinfo">内刊信息</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="normaldl">常用下载</a>
+                </li>
+                <li class="ewb-nav-date" id="sysTime">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="ewb-container">
+        <div class="ewb-now" id="ewb-now">
+            您当前的位置：<a href="index.html">首页</a><a class="ewb-now-link"> > 政务文件</a>
+        </div>
+        <div class="ewb-row">
+            <!-- 左侧菜单树 -->
+            <div class="ewb-span6">
+                <h2 class="ewb-left-hd" id="first-head">
+                部门
+                </h2>
+                <div class="ewb-left-bd">
+                    <ul class="wb-tree" id="wb-tree">
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧 -->
+            <div class="ewb-span23 ewb-ml10">
+                <!-- 栏目名称 -->
+                <div class="ewb-scol">
+                    <div class="ewb-scol-hd clearfix">
+                        <h2 class="ewb-scol-tt">
+                            <a href="javascript:void(0);" id="second-head">政务文件</a>
+                        </h2>
+                        <div class="search-block clearfix r">
+                            <input type="text" class="ewb-r-txt l" id="ewb-r-txt" placeholder="请输入标题">
+                            <button type="button" class="ewb-r-btn1 r" id="ewb-r-btn1" data-id=""></button>
+                        </div>
+                    </div>
+                    <div class="ewb-scol-bd">
+                        <div class="ewb-list-bd">
+                            <ul class="wb-data-item" id="info-nav">
+                            </ul>
+                        </div>
+                        <div id="pager" class="pager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="ewb-container">
+        <div class="ewb-footer ewb-mt12">
+            <p>主办单位：海安县人民政府 承办单位：海安县政务信息中心 技术支持：江苏国泰新点软件有限公司</p>
+        </div>
+    </div>
+    <!-- 栏目信息列表 -->
+    <script type="text/template" id="info-tem">
+        {{#Info}}
+        <li class="wb-data-list">
+            <div class="wb-data-infor">
+                <a target="_blank"  href="goverDetail.html?Outboxguid={{Outboxguid}}">{{Title}}</a>
+            </div>
+            <span class="wb-data-date">{{Senddate}}</span>
+        </li>
+        {{/Info}}
+    </script>
+    <!-- 一级部门 无子项-->
+    <script type="text/template" id="info-tem1">
+        {{#Info}}
+        <li class="wb-tree-items">
+            <h3 class="wb-tree-node">
+                <span class="wb-tree-iconl"></span>
+                <a class="wb-tree-tt" title="{{ouname}}" target="{{ouguid}}">{{ouname}}</a>
+            </h3>
+        </li>
+        {{/Info}}
+    </script>
+    <!-- 一级部门 有子项 -->
+    <script type="text/template" id="info-tem2">
+        {{#Info}}
+        <li class="wb-tree-items haschild">
+            <h3 class="wb-tree-node">
+                <span class="wb-tree-iconl"></span>
+                <i class="wb-tree-iconr" target="{{ouguid}}"></i>
+                <a class="wb-tree-tt" title="{{ouname}}" target="{{ouguid}}">{{ouname}}</a>
+            </h3>
+            <ul class="wb-tree-sub"></ul>
+        </li>
+        {{/Info}}
+    </script>
+    <!-- 其他部门 无子项-->
+    <script type="text/template" id="info-tem3">
+        {{#Info}}
+        <li class="wb-tree-items special">
+            <h3 class="wb-tree-node">
+                <span class="wb-tree-iconl"></span>
+                <a class="wb-tree-tt special" title="{{ouname}}" target="{{ouguid}}">{{ouname}}</a>
+            </h3>
+        </li>
+        {{/Info}}
+    </script>
+    <!-- 其他部门 有子项 -->
+    <script type="text/template" id="info-tem4">
+        {{#Info}}
+        <li class="wb-tree-items special haschild">
+            <h3 class="wb-tree-node">
+                <span class="wb-tree-iconl"></span>
+                <i class="wb-tree-iconr" target="{{ouguid}}"></i>
+                <a class="wb-tree-tt special" title="{{ouname}}" target="{{ouguid}}">{{ouname}}</a>
+            </h3>
+            <ul class="wb-tree-sub"></ul>
+        </li>
+        {{/Info}}
+    </script>
+    <script src="js/mustache.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="pager/mricode.pagination.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/goverAbout.js"></script>
+</body>
+
+</html>

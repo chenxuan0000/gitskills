@@ -1,0 +1,476 @@
+/**!
+ * [页面名称]:质量改进图表内套页面
+ * author: [chenxuan];
+ */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+ul,
+p,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.count-head {
+    height: 102px;
+    text-align: center;
+}
+
+.count-head h5 {
+    line-height: 102px;
+    font-size: 20px;
+}
+
+.count-main .time-select {
+    height: 42px;
+    overflow: hidden;
+    border-top: 1px solid #dedede;
+    background-color: #f7f7f7;
+}
+
+.count-main .parent-width {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.parent-width .width50 {
+    float: left;
+    width: 50%;
+}
+
+.echarts-one,
+.echarts-two {
+    margin-right: 10px;
+    padding: 0 20px;
+    height: 320px;
+    border: 1px solid #ddd;
+}
+.echarts-two.pd35 {
+    padding: 0 35px;
+}
+.echarts-two {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.echarts-head {
+    overflow: hidden;
+    height: 43px;
+    border-bottom: 1px solid #ddd;
+}
+
+.echarts-head h5 {
+    float: left;
+    font-size: 16px;
+    color: #1465b7;
+    font-weight: normal;
+    padding: 17px 0 6px 0;
+    margin: 0 3px;
+    border-bottom: 2px solid #1465b7;
+}
+
+.mt18 {
+    margin-top: 18px;
+}
+
+.echarts-body .left-countList {
+    float: left;
+    border-right: 1px solid #ddd;
+    width: 40%;
+}
+.echarts-body {
+    position: relative;
+}
+.left-countList ul {
+    padding-right: 18px;
+}
+
+.left-countList li {
+    height: 48px;
+    line-height: 48px;
+    margin-bottom: 13px;
+    background-color: #f5fafd;
+    color: #1363b8;
+    font-size: 16px;
+    border-left: 2px solid #1363b8;
+}
+
+.left-countList li .name {
+    float: left;
+    margin-left: 21px;
+}
+
+.left-countList li .num {
+    float: right;
+    margin-right: 18px;
+}
+
+.left-countList li .num>em {
+    font-size: 26px;
+    font-weight: bold;
+    padding-right: 4px;
+}
+
+.left-countList li.mb0 {
+    margin-bottom: 0;
+}
+
+.right-countechart {
+    position: relative;
+    float: left;
+    width: 60%;
+}
+
+.echart1 {
+    margin-left: 20px;
+    height: 230px;
+}
+
+.echart-content {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 230px;
+    width: 100%;
+}
+.echart-content.mg0 {
+    left: 0;
+}
+.echart-content .count1 {
+    height: 114px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+.echart-content.mg0 .count1 {
+    height: 142px;
+}
+.echart-content.mg0 .count1,
+.echart-content.mg0 .count2 {
+    margin: 0;
+}
+.echart-content .count1>h6 {
+    margin-bottom: 22px;
+    text-align: right;
+    margin-right: 33px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.echart-content .count2>h6 {
+    margin-top: 22px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.echart-content.mg0 .count1>h6 {
+    margin-right: 205px;
+    margin-bottom: 30px;
+}
+.echart-content .count1>p {
+    float: right;
+    width: 44%;
+    height: 48px;
+    border: 1px solid #ddd;
+    border-radius: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-weight: bold;
+    color: #ff9101;
+    font-size: 32px;
+    background-color: #f5fafd;
+}
+.echart-content.mg0 .count1>p {
+    margin-right: 23px;
+    width: 30%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 36px;
+}
+.echart-content .count2>p {
+    text-align: right;
+    margin-right: 10px;
+    color: #ff9101;
+}
+
+.echart-content .count2>.p1 {
+    font-weight: bold;
+    font-size: 30px;
+}
+.echart-content.mg0 .count2>.p1 {
+    font-size: 36px;
+}
+.echart-content .count2>.p1>span {
+    display: inline-block;
+    text-align: center;
+    height: 55px;
+    width: 46px;
+    margin: 0 3px;
+    line-height: 55px;
+    border: 1px solid #ddd;
+    background-color: #f5fafd;
+}
+.echart-content.mg0 .count2>.p1>span {
+    width: 54px;
+    height: 65px;
+    line-height: 65px;
+    margin: 0 6px;
+}
+.echart-content .count2>.p2>span {
+    display: inline-block;
+    text-align: center;
+    width: 46px;
+    margin: 0 6px;
+    color: #666;
+}
+.echart-content.mg0 .count2>.p2>span {
+    width: 60px;
+    margin: 0 6px;
+}
+.echart-content .count2 {
+    margin: 0 20px;
+}
+
+
+/* 第二栏图表width57*/
+
+.parent-width.border {
+    border: 1px solid #ddd;
+}
+
+.parent-width .width57 {
+    float: left;
+    width: 57%;
+}
+
+.parent-width .width43 {
+    float: left;
+    width: 43%;
+}
+.parent-width .width34 {
+    float: left;
+    width: 34%;
+}
+
+.parent-width .width66 {
+    float: left;
+    width: 66%;
+}
+
+.echarts-three,
+.echarts-four,
+.echarts-five,
+.echarts-six {
+    padding: 0 20px;
+    height: 330px;
+}
+
+.echarts-seven,
+.echarts-eight {
+    padding: 0 20px;
+    height: 350px;
+}
+
+.echart5,
+.echart6,
+.echart3,
+.echart4 {
+    height: 290px;
+}
+
+.left-countcontrast li {
+    height: 39px;
+    line-height: 39px;
+    margin-bottom: 10px;
+    background-color: #f5fafd;
+    color: #1363b8;
+    font-size: 16px;
+    border-left: 2px solid #1363b8;
+}
+.left-countcontrast.special li {
+    height: 46px;
+    line-height: 46px;
+    margin-bottom: 7px;
+}
+.left-countcontrast.special ul {
+    margin-top: 20px;
+}
+
+.left-countcontrast li .name {
+    float: left;
+    margin-left: 21px;
+}
+
+.left-countcontrast li .num {
+    float: right;
+    width: 62px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.left-countcontrast li .num>em {
+    font-size: 24px;
+    padding-right: 4px;
+    font-weight: bold;
+}
+
+.left-countcontrast li.mb0 {
+    margin-bottom: 0;
+}
+
+.parent-width .width28 {
+    float: left;
+    width: 28%;
+}
+.parent-width .width39 {
+    float: left;
+    width: 39%;
+}
+.parent-width .width33 {
+    float: left;
+    width: 33%;
+}
+.parent-width .width72 {
+    float: left;
+    width: 72%;
+}
+
+
+/*第三栏图标*/
+
+.month-classic {
+    height: 50px;
+    line-height: 50px;
+    text-align: right;
+    color: #1264b8;
+    font-size: 16px;
+}
+
+.month-classic span {
+    display: inline-block;
+    padding: 0 24px;
+}
+
+.echarts-body .echart7,
+.echarts-body .echart8 {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 305px;
+}
+
+
+/*form-control*/
+
+.form-control {
+    float: left;
+    width: 128px;
+    height: 27px;
+    padding: 2px 8px;
+    margin-top: 7px;
+    margin-left: 22px;
+    color: #666;
+}
+
+.time-select .vs {
+    float: left;
+    color: #0069b3;
+    line-height: 42px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.time-select .btn-primary {
+    width: 80px;
+    height: 26px;
+    margin-top: 7px;
+    margin-left: 22px;
+    line-height: 1px;
+    background-color: #0168b7;
+}
+
+
+/*对比月份*/
+.countAll-num  {
+    margin-top: 15px;
+}
+.countAll-num ul {
+    margin-right: -2%;
+}
+.countAll-num li {
+    float: left;
+    width: 23%;
+    height: 105px;
+    font-size: 17px;
+    color: #fff;
+    margin-right: 2%;
+    background: url(../images/countall-bg1.png) 15px center no-repeat #ef4b39;
+}
+.countAll-num .num {
+    font-size: 30px;
+}
+.countAll-num p.mt20 {
+    margin-top: 17px;
+}
+.countAll-num p {
+    margin-left: 105px;
+}
+.countAll-num li.bg2 {
+    background-image: url(../images/countall-bg2.png);
+    background-color: #f69e17;
+}
+.countAll-num li.bg3 {
+    background-image: url(../images/countall-bg3.png);
+    background-color: #1364b9;
+}
+.countAll-num li.bg4 {
+    background-image: url(../images/countall-bg4.png);
+    background-color: #37aef3;
+}
+
+/* 各研发群问题办结率排行 */
+.rank { 
+    margin: 0;
+    padding: 0;
+    padding-left: 17px;
+    width: 299px;
+}
+.rank li {
+    padding: 6px 0 9px;
+    border-bottom: 1px solid #c9c9c9;
+}
+.rank-num {
+    padding-left: 7px;
+    padding-right: 12px;
+    color: #323232;
+    font-size: 24px;
+}
+.rank-r p {
+    margin: 0;
+    height: 24px;
+    line-height: 24px;
+}
+.data-num {
+    font-size: 14px;
+}
+.rank-box {
+    width: 246px;
+    height: 12px;
+    background: #d8eefc;
+}
+.rank-percent {
+    height: 12px;
+    background: #37adf3;
+}
+
+.parent-widthBg {
+    position: absolute;
+    display: block;
+    margin-top: 128px;
+    margin-left: -24px;
+}

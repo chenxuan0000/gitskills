@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <title>海安县政务网</title>
+</head>
+
+<body>
+    <div style="z-index: 10000;position:absolute;left:0;top:0;width:100%;height: 100%;background-color: white" id="topdiv"></div>
+    <!-- header -->
+    <div class="ewb-container">
+        <!-- banner -->
+        <div class="ewb-header">
+            <img src="images/head.jpg" alt="" title="海安县政务网">
+        </div>
+        <!-- nav -->
+        <div class="ewb-container">
+            <ul class="ewb-nav clearfix" id="ewb-nav">
+                <li class="ewb-nav-li first">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="haianstate">海安动态</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="deptstate">部门动态</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="notice2">通知公告</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="goverAbout.html">政务文件</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="innerinfo">内刊信息</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="normaldl">常用下载</a>
+                </li>
+                <li class="ewb-nav-date" id="sysTime">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="ewb-container">
+        <div class="ewb-row">
+            <div class="ewb-span7">
+                <!-- 办公事物平台 -->
+                <div class="ewb-flat ewb-mt12">
+                    <div class="ewb-flat-wel" id="ewb-flat-wel">
+                        <i class="logoOut" id="logoOut">注销</i>
+                    </div>
+                    <div class="ewb-flat-office">
+                        <a>办公事务平台</a>
+                    </div>
+                    <ul class="ewb-flat-items" id="left-top">
+                    </ul>
+                    <div class="ewb-flat-support">
+                        <a target="_blank" href="http://32.129.22.108/EpointASP">统一支撑平台</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ewb-span22 ewb-ml10">
+                <div class="ewb-row">
+                    <div class="ewb-span11">
+                        <!-- 图片轮播 -->
+                        <div class="wb-slider ewb-mt12" id="slider">
+                            <div class="wb-slider-conbox" id="wb-slider-conbox">
+                            </div>
+                            <div class="wb-slider-switcher" id="wb-slider-switcher">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ewb-span11 ewb-ml10">
+                        <!-- 海安动态 -->
+                        <div class="ewb-col ewb-mt12 getviewv6" id="haianstate">
+                            <div class="ewb-col-hd clearfix">
+                                <h2 class="ewb-col-tt">
+                                        <a href="#">海安动态</a>
+                                    </h2>
+                            </div>
+                            <div class="ewb-col-bd">
+                                <ul class="wb-data-item">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ewb-row">
+                    <div class="ewb-span11">
+                        <!-- 部门动态 -->
+                        <div class="ewb-mod ewb-col ewb-mt12 getviewv6" id="deptstate">
+                            <div class="ewb-col-hd clearfix">
+                                <h2 class="ewb-col-tt">
+                                        <a href="#">部门动态</a>
+                                    </h2>
+                            </div>
+                            <div class="ewb-col-bd">
+                                <ul class="wb-data-item">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ewb-span11 ewb-ml10">
+                        <!-- 政务文件 -->
+                        <div class="ewb-mod ewb-col ewb-mt12">
+                            <div class="ewb-col-hd clearfix">
+                                <h2 class="ewb-col-tt">
+                                        <a href="goverAbout.html">政务文件</a>
+                                    </h2>
+                            </div>
+                            <div class="ewb-col-bd">
+                                <ul class="wb-data-item" id="goverfile">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ewb-row">
+                    <!-- 新闻图片轮播 -->
+                    <div class="ewb-banner ewb-mt12" id="slider1">
+                        <div class="wb-slider-conbox">
+                            <div class="wb-slider-ctag">
+                                <img src="images/banner1.jpg" alt="">
+                            </div>
+                            <div class="wb-slider-ctag">
+                                <img src="images/banner2.jpg" alt="">
+                            </div>
+                            <div class="wb-slider-ctag">
+                                <img src="images/banner4.jpg" alt="">
+                            </div>
+                            <div class="wb-slider-ctag">
+                                <img src="images/banner5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="wb-slider-switcher">
+                            <div class="wb-slider-stag">1</div>
+                            <div class="wb-slider-stag">2</div>
+                            <div class="wb-slider-stag">3</div>
+                            <div class="wb-slider-stag">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ewb-row">
+            <div class="ewb-span7">
+                <!-- 通知公告 -->
+                <div class="ewb-notice ewb-mt12 getviewv7" id="notice2">
+                    <div class="ewb-notice-hd clearfix">
+                        <h2 class="ewb-notice-tt">
+                                <a href="#">通知公告</a>
+                            </h2>
+                    </div>
+                    <div class="ewb-notice-bd">
+                        <ul class="wb-data-item">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ewb-span11 ewb-ml10">
+                <!-- 内刊信息 -->
+                <div class="ewb-mod02 ewb-col ewb-mt12" id="columninfo">
+                    <div class="ewb-col-hd clearfix">
+                        <h2 class="ewb-col-tt">
+                                <a href="javascript:void(0);">内刊信息</a>
+                            </h2>
+                    </div>
+                    <div class="ewb-col-bd">
+                        <ul class="ewb-book clearfix">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ewb-span11 ewb-ml10">
+                <!-- 最新内刊 -->
+                <div class="ewb-mod02 ewb-col ewb-mt12 getviewv6" id="innerinfo">
+                    <div class="ewb-col-hd clearfix">
+                        <h2 class="ewb-col-tt">
+                                <a href="#">最新内刊</a>
+                            </h2>
+                    </div>
+                    <div class="ewb-col-bd">
+                        <ul class="wb-data-item">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ewb-row">
+            <div class="ewb-span7">
+                <!-- 系统帮助 在线问答 -->
+                <div class="ewb-mod ewb-notice ewb-mt12" id="tabview-colunm">
+                    <div class="tab-view">
+                        <div class="ewb-notice-hd clearfix" data-role="head">
+                            <span class="ewb-notice-tt current l" data-role="tab" data-target="tab-a">
+                                    <a class="tab-column" id="normaldl" href="#">系统帮助</a>
+                                </span>
+                            <span class="ewb-notice-tt l" data-role="tab" data-target="tab-b">
+                                    <a class="tab-column" id="onlineanswer">在线问答</a>
+                                </span>
+                        </div>
+                        <div data-role="body" class="ewb-tab-bd">
+                            <div data-role="tab-content" data-id="tab-a">
+                                <div class="ewb-notice-bd">
+                                    <ul class="wb-data-item" id="normaldlul">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div data-role="tab-content" data-id="tab-b">
+                                <div class="ewb-notice-bd">
+                                    <ul class="wb-data-item" id="onlineanswerul">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ewb-span22 ewb-ml10">
+                <!-- 分类信息统计 -->
+                <div class="ewb-mod02 ewb-col ewb-mt12">
+                    <div class="ewb-col-hd clearfix">
+                        <h2 class="ewb-col-tt">
+                                <a href="javascript:void(0);">分类信息统计</a>
+                            </h2>
+                    </div>
+                    <div class="ewb-col-bd">
+                        <!-- 部门 -->
+                        <div class="ewb-tab tab-view">
+                            <div class="ewb-tab-hd clearfix" data-role="head">
+                                <span class="ewb-tab-tt  current l" data-role="tab" data-target="tab-a">
+                                    <a>部门</a>
+                                    <i></i>
+                                </span>
+                                <span class="ewb-tab-tt l" data-role="tab" data-target="tab-b" id="click-load">
+                                    <a>栏目</a>
+                                    <i></i>
+                                </span>
+                            </div>
+                            <div data-role="body" class="ewb-tab-bd">
+                                <div data-role="tab-content" data-id="tab-a">
+                                    <ul class="ewb-tab-items clearfix" id="dept-list">
+                                    </ul>
+                                    <div id="pager1" class="pager">
+                                        <span class="prv-page disable"></span>
+                                        <span class="cur-page">1</span>
+                                        <span class="fenge">/</span>
+                                        <span class="total-page"></span>
+                                        <span class="next-page"></span>
+                                    </div>
+                                </div>
+                                <div data-role="tab-content" data-id="tab-b">
+                                    <ul class="ewb-tab-items clearfix" id="column-list">
+                                    </ul>
+                                    <div id="pager2" class="pager">
+                                        <span class="prv-page disable"></span>
+                                        <span class="cur-page">1</span>
+                                        <span class="fenge">/</span>
+                                        <span class="total-page"></span>
+                                        <span class="next-page"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="ewb-container">
+        <div class="ewb-footer  ewb-mt12">
+            <p>主办单位：海安县人民政府 承办单位：海安县政务信息中心 技术支持：江苏国泰新点软件有限公司</p>
+        </div>
+    </div>
+    <!-- 相似类目 海安动态 部门动态 最新内刊 -->
+    <script type="text/template" id="list-tem">
+        {{#Info}}
+        <li class="wb-data-list">
+            <div class="wb-data-infor">
+                <a target="_blank" href="detail.html?InfoGuid={{InfoGuid}}">{{txtTitle}}</a>
+            </div>
+            <span class="wb-data-date">{{PostDate}}</span>
+        </li>
+        {{/Info}}
+    </script>
+    <!-- 政府文件 -->
+    <script type="text/template" id="gover-tem">
+        {{#Info}}
+        <li class="wb-data-list">
+            <div class="wb-data-infor">
+                <a target="_blank" href="goverDetail.html?Outboxguid={{Outboxguid}}">{{Title}}</a>
+            </div>
+            <span class="wb-data-date">{{Senddate}}</span>
+        </li>
+        {{/Info}}
+    </script>
+    <!-- 相似类目 常用下载 通知公告 -->
+    <script type="text/template" id="list-tem2">
+        {{#Info}}
+        <li class="wb-data-list">
+            <div class="wb-data-infor mr">
+                <a target="_blank" href="detail.html?InfoGuid={{InfoGuid}}">{{txtTitle}}</a>
+            </div>
+        </li>
+        {{/Info}}
+    </script>
+    <!-- 讨论区列表 -->
+    <script type="text/template" id="list-tem6">
+        {{#ListNode}}
+        <li class="wb-data-list">
+            <div class="wb-data-infor mr">
+                <a target="_blank" href="{{ViewUrl}}">{{Topic}}</a>
+            </div>
+        </li>
+        {{/ListNode}}
+    </script>
+    <!-- 内刊信息 -->
+    <script type="text/template" id="list-tem3">
+        {{#CateGoryInfo}}
+        <li class="ewb-book-item">
+            <a target="_blank" title="{{CategoryName}}" href="about.html?CategoryGuid={{CategoryGuid}}">{{CategoryName}}</a>
+        </li>
+        {{/CateGoryInfo}}
+    </script>
+    <!-- 分类信息统计 部门列表 -->
+    <script type="text/template" id="list-tem4">
+        {{#OuInfo}}
+        <li class="ewb-tab-item">
+            <a>
+                <span title="{{OUName}}" class="ewb-tab-item-name">{{OUName}}</span>
+                <span class="ewb-tab-item-num">{{WebinfoCount}}</span>
+            </a>
+        </li>
+        {{/OuInfo}}
+    </script>
+    <!-- 分类信息统计 栏目列表-->
+    <script type="text/template" id="list-tem5">
+        {{#CateGory}}
+        <li class="ewb-tab-item">
+            <a>
+                <span title="{{{{CategoryName}}}}" class="ewb-tab-item-name">{{CategoryName}}</span>
+                <span class="ewb-tab-item-num">{{WebinfoNum}}</span>
+            </a>
+        </li>
+        {{/CateGory}}
+    </script>
+    <script src="js/mustache.js"></script>
+    <script src="js/tabview.js"></script>
+    <script src="js/imgscroll.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

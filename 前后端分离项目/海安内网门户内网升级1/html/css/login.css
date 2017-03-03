@@ -1,0 +1,148 @@
+/**!
+ * [页面名称]:海安项目登录页
+ * author: [chenxuan];
+ */
+html {
+    overflow: hidden;
+}
+
+.login-pic {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -455px;
+    margin-top: -295px;
+    width: 910px;
+}
+
+.head {
+    width: 712px;
+    margin: 28px auto 78px auto;
+    color: #fff;
+}
+
+.head img {
+    display: block;
+    margin: 0 auto;
+}
+
+.login-block {
+    float: right;
+    width: 345px;
+    height: 335px;
+    background-color: #eaf4ff;
+    -moz-box-shadow: 0 0 10px rgba(2, 2, 2, 0.28);
+    box-shadow: 0 0 10px rgba(2, 2, 2, 0.28);
+}
+
+.inner-block {
+    width: 300px;
+    margin: 0 auto 40px auto;
+}
+
+.login-block-hd {
+    height: 68px;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.login-block-hd img {
+    margin: 23px 0 0 7px;
+}
+
+input[type='password'],
+input[type='text'] {
+    width: 302px;
+    display: block;
+    height: 37px;
+    line-height: 37px;
+    color: #333;
+    text-indent: 40px;
+    border: 1px solid #d2d2d2;
+    border-radius: 3px;
+    font-size: 15px;
+    background: url(../images/pwd.png) 11px 50% no-repeat #fff;
+}
+
+.login-block .user {
+    margin-top: 28px;
+    margin-bottom: 15px;
+    background-image: url(../images/user.png);
+}
+
+.two-btn {
+    margin-top: 20px;
+
+}
+
+.two-btn .loginbtn {
+    width: 145px;
+    height: 46px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    background-color: #fc8403;
+}
+
+.two-btn .loginbtn:hover {
+    background-color: #fc5503;
+}
+.two-btn .ls18 {
+    margin-left: 18px;
+}
+
+.login-block .checkbox {
+    margin-top: 17px;
+    height: 18px;
+}
+
+.login-block .icheck {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+.login-block .icheck-label {
+    padding-left: 5px;
+    line-height: 18px;
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+}
+
+.placeholder {
+    color: #999;
+}
+
+.moz-placeholder {
+    color: #999;
+}
+.ms-input-placeholder {
+    color: #999;
+}
+.webkit-input-placeholder {
+    color: #999;
+}
+/*footer*/
+
+.login-intro {
+    margin-top: 478px;
+    color: #e8e6e6;
+    font-size: 15px;
+    text-align: center;
+}

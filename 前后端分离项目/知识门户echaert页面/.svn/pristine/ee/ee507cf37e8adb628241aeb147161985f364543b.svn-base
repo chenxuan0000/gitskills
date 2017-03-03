@@ -1,0 +1,481 @@
+(function(win, $) {
+
+    var initChartOption1 = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        color: ['#56b5ef', '#ee7b20', '#6ac11a', '#ff3801', '#cb37cb'],
+        legend: {
+            left: 4,
+            top: 10,
+            data: ['政务服务', '电子政务', '建筑企业', '数字建设', '基础支撑'],
+            itemGap: 15,
+            itemWidth: 17,
+            itemHeight: 8,
+        },
+        grid: {
+            left: '1%',
+            right: '5%',
+            top: '16%',
+            bottom: '1%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            boundaryGap: false,
+            data: ['2016-08', '2016-09', '2016-10', '2016-11', '2016-12', '2017-01'],
+            axisLabel: { interval: 0 },
+            axisTick: { inside: true }
+        }],
+        yAxis: [{
+            type: 'value',
+            interval: 500
+        }],
+        series: [{
+            name: '政务服务',
+            type: 'line',
+            stack: '总量',
+            symbolSize: 6,
+            data: [240, 132, 101, 134, 90, 230],
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#56b5ef' // 0% 处的颜色
+                    }, {
+                        offset: 1,
+                        color: '#fff' // 100% 处的颜色
+                    }], false)
+                }
+            }
+        }, {
+            name: '电子政务',
+            type: 'line',
+            stack: '总量',
+            symbolSize: 6,
+            data: [220, 182, 191, 234, 290, 330],
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#ee7b20' // 0% 处的颜色
+                    }, {
+                        offset: 1,
+                        color: '#fff' // 100% 处的颜色
+                    }], false)
+                }
+            }
+        }, {
+            name: '建筑企业',
+            type: 'line',
+            stack: '总量',
+            symbolSize: 6,
+            data: [150, 232, 201, 154, 190, 330],
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#6ac11a' // 0% 处的颜色
+                    }, {
+                        offset: 1,
+                        color: '#fff' // 100% 处的颜色
+                    }], false)
+                }
+            }
+        }, {
+            name: '数字建设',
+            type: 'line',
+            stack: '总量',
+            symbolSize: 6,
+            data: [320, 332, 301, 334, 390, 330],
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#ff3801' // 0% 处的颜色
+                    }, {
+                        offset: 1,
+                        color: '#fff' // 100% 处的颜色
+                    }], false)
+                }
+            }
+        }, {
+            name: '基础支撑',
+            type: 'line',
+            stack: '总量',
+            symbolSize: 6,
+            data: [520, 632, 701, 534, 729, 433],
+            areaStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: '#cb37cb' // 0% 处的颜色
+                    }, {
+                        offset: 1,
+                        color: '#fff' // 100% 处的颜色
+                    }], false)
+                }
+            }
+        }]
+    };
+
+    var initChartOption2 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        color: ['#37adf3', '#f04b38', '#1464b9', '#f69e18', '#57c856'],
+        legend: {
+            orient: 'vertical',
+            top: 40,
+            right: 0,
+            data: ['政务服务', '电子政务', '建筑企业', '数字建设', '基础支撑'],
+            itemGap: 23
+        },
+        series: [{
+            type: 'pie',
+            center: ['40%', '48%'],
+            radius: ['72%', '72.1%'],
+            "color": ["#eee"],
+            avoidLabelOverlap: false,
+            hoverAnimation: false,
+            stillShowZeroSum: false,
+            itemStyle: {
+                normal: {
+                    borderColor: "#e7e7e7"
+                },
+                emphasis: {
+                    borderColor: "#e7e7e7"
+                }
+            },
+            tooltip: { show: false },
+            labelLine: {
+                normal: {
+                    show: false
+                },
+                emphasis: { show: false }
+            },
+            data: [
+                { value: 0 }
+            ]
+        }, {
+            type: 'pie',
+            center: ['40%', '48%'],
+            radius: ['38%', '38.1%'],
+            "color": ["#eee"],
+            avoidLabelOverlap: false,
+            hoverAnimation: false,
+            stillShowZeroSum: false,
+            itemStyle: {
+                normal: {
+                    borderColor: "#e7e7e7"
+                },
+                emphasis: {
+                    borderColor: "#e7e7e7"
+                }
+            },
+            tooltip: { show: false },
+            labelLine: {
+                normal: {
+                    show: false
+                },
+                emphasis: { show: false }
+            },
+            data: [
+                { value: 0 }
+            ]
+        }, {
+            name: '访问来源',
+            type: 'pie',
+            center: ['40%', '48%'],
+            radius: ['45%', '65%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '20',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data: [
+                { value: 18, name: '政务服务' },
+                { value: 28, name: '电子政务' },
+                { value: 20, name: '建筑企业' },
+                { value: 27, name: '数字建设' },
+                { value: 27, name: '基础支撑' }
+            ]
+        }]
+    };
+
+    var dataInfo = {
+        "finish": [
+            [9, 13, 11, 12, 17],
+            [6, 10, 7, 9, 9],
+            [5, 7, 9, 12, 9],
+            [6, 12, 8, 11, 8],
+            [4, 9, 10, 13, 12]
+        ],
+        "unfinish": [
+            [8, 10, 15, 10, 19],
+            [7, 12, 7, 13, 9],
+            [8, 5, 7, 9, 9],
+            [6, 12, 10, 13, 9],
+            [7, 6, 9, 5, 12]
+        ],
+        "average": [
+            [38, 45, 52, 45, 38],
+            [30, 40, 50, 40, 30],
+            [35, 45, 55, 45, 35],
+            [32, 42, 52, 41, 39],
+            [38, 42, 50, 42, 36]
+        ]
+    }
+    var initChartOption3 = {
+
+        timeline: {
+            axisType: 'category',
+            left: 23,
+            right: 28,
+            bottom: -15,
+            autoPlay: true,
+            controlStyle: {
+                show: true
+            },
+            checkpointStyle: {
+                symbol: 'circle',
+                color: '#f66e1a',
+                symbolSize: 8,
+                borderWidth: 0,
+            },
+            lineStyle: {
+                width: 1
+            },
+            playInterval: 1000,
+            symbol: 'circle',
+            symbolSize: 7,
+            data: ['2002-01', '2003-01', '2004-01', '2005-01', '2006-01'],
+            controlStyle: {
+                showPlayBtn: false,
+                itemSize: 10,
+                itemGap: 5,
+            },
+            label: { position: 10 }
+        },
+        options: [{
+            color: ["#0d96e6", "#f99e29", "#56c755"],
+            tooltip: {
+                trigger: 'axis'
+            },
+
+            legend: {
+                top: 20,
+                left: 10,
+                itemWidth: 14,
+                itemHeight: 7,
+                data: [{
+                    name: '已结案问题',
+                    icon: 'rect'
+                }, {
+                    name: '未结案问题',
+                    icon: 'rect'
+                }, {
+                    name: '平均处理时长',
+                    icon: 'image://./images/legend3.jpg',
+                }],
+                itemGap: 20
+            },
+            grid: {
+                width: 445,
+                height: 215,
+                left: 15,
+                bottom: 36,
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                data: ['政务服务', '电子政务', '建筑企业', '数字建设', '基础支撑'],
+                axisTick: {
+                    show: true,
+                    alignWithLabel: true,
+                    inside: true
+                }
+            }],
+            yAxis: [{
+                type: 'value',
+                min: 0,
+                max: 25,
+                interval: 5,
+                axisLabel: {
+                    formatter: '{value}'
+                },
+                axisTick: { show: false }
+            }, {
+                type: 'value',
+                min: 0,
+                max: 75,
+                interval: 15,
+                axisLabel: {
+                    formatter: '{value}'
+                },
+                axisTick: { show: false }
+            }],
+            series: [{
+                name: '已结案问题',
+                type: 'bar',
+                data: dataInfo.finish[0],
+                barWidth: '28%',
+                barGap: '10%'
+            }, {
+                name: '未结案问题',
+                type: 'bar',
+                data: dataInfo.unfinish[0],
+                barWidth: '26%',
+                barGap: '10%'
+            }, {
+                name: '平均处理时长',
+                type: 'line',
+                symbolSize: 6,
+                markLine: {
+                    symbol: ['none', 'arrow'],
+                    symbolSize: [2, 4],
+                    itemStyle: {
+                        normal: {
+                            lineStyle: {
+                                color: 'orange'
+                            },
+                            barBorderColor: 'orange',
+                            label: {
+                                normal: {
+                                    position: 'end',
+                                    formatter: function(params) {
+                                        return Math.round(params.value);
+                                    }
+                                },
+
+                                textStyle: {
+                                    color: 'orange'
+                                }
+                            }
+                        }
+                    },
+                    data: [{
+                        type: 'average',
+                        name: '总平均处理时长'
+                    }]
+                },
+                yAxisIndex: 1,
+                data: dataInfo.average[0]
+            }]
+        }, {
+            series: [
+                { data: dataInfo.finish[1] },
+                { data: dataInfo.unfinish[1] },
+                { data: dataInfo.average[1] }
+            ]
+
+        }, {
+            series: [
+                { data: dataInfo.finish[2] },
+                { data: dataInfo.unfinish[2] },
+                { data: dataInfo.average[2] }
+            ]
+
+        }, {
+            series: [
+                { data: dataInfo.finish[3] },
+                { data: dataInfo.unfinish[3] },
+                { data: dataInfo.average[3] }
+            ]
+
+        }, {
+            series: [
+                { data: dataInfo.finish[4] },
+                { data: dataInfo.unfinish[4] },
+                { data: dataInfo.average[4] }
+            ]
+
+        }]
+    }
+
+    var initChartOption4 = {
+        color: ['#37adf3'],
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '7%',
+            top: '10%',
+            bottom: 0,
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            splitLine: false,
+            boundaryGap: [0, '3.8%'],
+            axisTick: { show: false },
+            axisLabel: { show: false }
+        },
+        yAxis: {
+            type: 'category',
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    type: 'solid'
+                }
+            },
+            data: ['政务服务', '电子政务', '建筑企业', '数字建设', '基础支撑'],
+            axisTick: { show: false }
+        },
+        series: [{
+            name: '2017年',
+            type: 'bar',
+            barWidth: '38%',
+            data: [38, 60, 55, 50, 69],
+            label: {
+                normal: {
+                    show: true,
+                    position: 'right',
+                    formatter: '{c}min',
+                    textStyle: {
+                        fontSize: 14,
+                        color: '#333'
+                    }
+                }
+            }
+        }]
+    };
+
+    constructionChart1 = echarts.init(document.getElementById('echart1'));
+    constructionChart1.setOption(initChartOption1);
+
+    constructionChart2 = echarts.init(document.getElementById('echart2'));
+    constructionChart2.setOption(initChartOption2);
+
+    constructionChart3 = echarts.init(document.getElementById('echart3'));
+    constructionChart3.setOption(initChartOption3);
+
+    constructionChart4 = echarts.init(document.getElementById('echart4'));
+    constructionChart4.setOption(initChartOption4);
+
+    constructionChart5 = echarts.init(document.getElementById('echart5'));
+    constructionChart5.setOption(initChartOption3);
+
+    constructionChart6 = echarts.init(document.getElementById('echart6'));
+    constructionChart6.setOption(initChartOption4);
+
+}(this, jQuery));

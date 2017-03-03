@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <title>海安县政务网-政务文件详情</title>
+</head>
+
+<body>
+<div style="z-index: 10000;position:absolute;left:0;top:0;width:100%;height: 100%;background-color: white" id="topdiv"></div>
+    <!-- header -->
+    <div class="ewb-container">
+        <!-- banner -->
+        <div class="ewb-header">
+            <img src="images/head.jpg" alt="" title="海安县政务网">
+        </div>
+        <!-- nav -->
+        <div class="ewb-container">
+            <ul class="ewb-nav clearfix" id="ewb-nav">
+                <li class="ewb-nav-li first">
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="haianstate">海安动态</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="deptstate">部门动态</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="notice2">通知公告</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="goverAbout.html">政务文件</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="innerinfo">内刊信息</a>
+                </li>
+                <li class="ewb-nav-li">
+                    <a href="#" class="normaldl">常用下载</a>
+                </li>
+                <li class="ewb-nav-date" id="sysTime">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- main -->
+    <div class="ewb-container">
+        <div class="ewb-now" id="ewb-now">
+            您当前的位置：<a href="index.html">首页</a><a  class="ewb-now-link"> > 政务文件</a>
+        </div>
+        <div class="ewb-row special" id="detail-main">
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="ewb-container">
+        <div class="ewb-footer ewb-mt12">
+            <p>主办单位：海安县人民政府 承办单位：海安县政务信息中心 技术支持：江苏国泰新点软件有限公司</p>
+        </div>
+    </div>
+    <!-- 详细详情-->
+    <script type="text/template" id="detail-info">
+        <h5 class="detail-tl">{{Title}}</h5>
+        <p class="info-from" id="info-from">【信息时间：{{Senddate}} 】<a href="javascript:void(0);" id="print">【我要打印】</a><a href="javascript:window.opener=null;window.open('','_self');window.close();" class="close">【关闭】</a>
+        </p>
+        <p class="mb15"><span class="blue">发文字号：</span>{{Fawennumber}}</p>
+    </script>
+    <script src="js/mustache.js"></script>
+    <script src="js/jquery-migrate-1.1.0.js"></script>
+    <script src="js/jquery.jqprint-0.3.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/goverDetail.js"></script>
+</body>
+
+</html>

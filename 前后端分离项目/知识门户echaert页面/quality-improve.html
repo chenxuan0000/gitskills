@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="js/zui/css/zui.min.css" />
+    <link rel="stylesheet" href="css/quality-improve.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <title>质量改进图表内套页面</title>
+</head>
+
+<body>
+    <div class="quality-improve center-block">
+        <!-- tabs -->
+        <ul class="nav nav-tabs">
+            <li>
+                <a href="###" data-target="#six-month" data-toggle="tab">近6个月</a>
+            </li>
+            <li class="active">
+                <a href="###" data-target="#last-month" data-toggle="tab">上个月</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <!-- 近6个月 -->
+            <div class="tab-pane fade" id="six-month">
+                <div class="count-block">
+                    <ul class="clearfix">
+                        <li>
+                            <p>问题总计</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                        <li>
+                            <p>已结案问题</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                        <li>
+                            <p>未结案问题</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                        <li>
+                            <p>平均处理时长</p>
+                            <p><span class="num">0</span> min</p>
+                        </li>
+                        <li>
+                            <p>疑难问题</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 图表区域 -->
+                <div class="left-echart">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题数量</span>
+                    </h3>
+                    <div class="echart1" id="echart1"></div>
+                </div>
+                <div class="right-echart">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题办结率排行</span>
+                    </h3>
+                    <ul class="rank"  id="done-rank2">
+                    </ul>
+                </div>
+                <div class="left-echart left-echart2">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题数量处理情况汇总</span>
+                    </h3>
+                    <div class="echart3" id="echart5"></div>
+                </div>
+                <div class="right-echart right-echart2">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题平均处理时长</span>
+                    </h3>
+                    <div class="echart4" id="echart6"></div>
+                </div>
+            </div>
+            <!-- 上个月 -->
+            <div class="tab-pane fade active in" id="last-month">
+                <div class="count-block">
+                    <ul class="clearfix">
+                        <li>
+                            <p>问题总计</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                        <li>
+                            <p>已结案问题</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                        <li>
+                            <p>未结案问题</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                        <li>
+                            <p>平均处理时长</p>
+                            <p><span class="num">0</span> min</p>
+                        </li>
+                        <li>
+                            <p>疑难问题</p>
+                            <p><span class="num">0</span> 个</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 图表区域 -->
+                <div class="left-echart">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题数量</span>
+                    </h3>
+                    <div>
+                        <div class="echart2" id="echart2"></div>
+                    </div>
+                </div>
+                <div class="right-echart">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题办结率排行</span>
+                    </h3>
+                    <ul class="rank" id="done-rank">
+                       
+                    </ul>
+                </div>
+                <div class="left-echart left-echart2">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题数量处理情况汇总</span>
+                    </h3>
+                    <div class="echart3" id="echart3"></div>
+                </div>
+                <div class="right-echart right-echart2">
+                    <h3 class="echart-title">
+                        <span class="underline">各研发群问题平均处理时长</span>
+                    </h3>
+                    <div class="echart4" id="echart4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模板 办结率排行-->
+    <script type="text/x-template" id="tmpl1">
+    {{#item}}
+        <li class="clearfix">
+            <span class="rank-num l">{{i}}</span>
+            <div class="rank-r l">
+                <p class="rank-data clearfix">
+                    <span class="l">{{name}}</span>
+                    <span class="data-num r">{{num}}%</span>
+                </p>
+                <div class="rank-box">
+                    <div class="rank-percent" style="width : {{num}}%;"></div>
+                </div>
+            </div>
+        </li>
+    {{/item}}
+    </script>
+    <script src="js/zui/js/zui.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/mustache.js"></script>
+    <script src="js/jquery.xml.min.js"></script>
+    <script src="js/quality-improve.js"></script>
+</body>
+
+</html>

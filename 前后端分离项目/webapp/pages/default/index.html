@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <title>首页</title>
+    <script src="../../js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        './css/index.css'
+    ]);
+    </script>
+</head>
+
+<body>
+    <!-- 头 -->
+    <div id="header" class="header container"></div>
+    <div class="wb-slider" id="Banner">
+        <div class="wb-slider-conbox">
+            <div class="wb-slider-ctag" style="background-image:url('images/banner01.jpg')">
+            </div>
+            <div class="wb-slider-ctag" style="background-image:url('images/banner01.jpg')">
+            </div>
+            <div class="wb-slider-ctag" style="background-image:url('images/banner01.jpg')">
+            </div>
+        </div>
+        <div class="wb-slider-switcher">
+            <div class="wb-slider-stag"></div>
+            <div class="wb-slider-stag"></div>
+            <div class="wb-slider-stag"></div>
+        </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="main container">
+        <div class="big-title">
+            <h5><i class="blue"></i><span class="head-txt">优秀案例<em class="en">EXCELLENT  CASES</em></span><i class="blue"></i></h5>
+        </div>
+        <div class="content" id="tabview">
+            <div class="case-hd clearfix" data-role="head" id="tab-hd">
+            </div>
+            <div class="case-bd" data-role="body" id="tab-bd">
+            </div>
+        </div>
+    </div>
+    <!-- 尾 -->
+    <div id="footer" class="footer"></div>
+    <!--模板 tab-hd-->
+    <script type="text/x-template" id="tmpl1">
+        {{#Info}}
+        <span class="title l" data-role="tab" data-target="{{CategoryNum}}">{{CategoryName}}</span> {{/Info}}
+    </script>
+    <!--模板 tab-bd-->
+    <script type="text/x-template" id="tmpl2">
+        {{#Info}}
+        <div class="content hidden" data-role="tab-content" data-id="{{CategoryNum}}">
+            <div class="ul-list">
+                <ul class="clearfix"></ul>
+            </div>
+        </div>
+        {{/Info}}
+    </script>
+    <!--模板 tab-bd 内容-->
+    <script type="text/x-template" id="tmpl3">
+        {{#Info}}
+        <li>
+            <div class="img-div">
+                <a target="_blank" href="../caselib/case-detail.html?guid={{InfoGuid}}&num={{guid}}&classic=1"><img src="{{ListImgUrl}}" alt="加载图片失败" class="show-img"></a>
+            </div>
+            <div class="show-info">
+                <p class="name" title="{{Title}}">{{Title}}</p>
+                <p class="num" title="项目编号{{ProjectNum}}">项目编号{{ProjectNum}}</p>
+                <div class="look">
+                {{#FormalWebUrl}}
+                    <a target="_blank" href="{{FormalWebUrl}}" title="浏览上线网站" class="computer"></a>
+                    {{/FormalWebUrl}}
+                    {{#APPImgUrl}}
+                    <a class="tel">
+                        <div class="code">
+                            <div class="img-div">
+                                <img src="{{APPImgUrl}}" alt="图片加载中....">
+                            </div>
+                            <span>安装移动端产品</span>
+                        </div>
+                    </a>
+                    {{/APPImgUrl}}
+                    {{#TestWebUrl}}
+                    <a target="_blank" href="{{TestWebUrl}}" title="访问测试demo" class="file"></a>
+                    {{/TestWebUrl}}
+                </div>
+            </div>
+        </li>
+        {{/Info}}
+    </script>
+    <script src="../../js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/lib/tabview.js',
+        './js/banner.js',
+        './js/index.js'
+    ]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="js/zui/css/zui.min.css" />
+    <link rel="stylesheet" href="css/count-page.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <title>统计页面1-自适应</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="count-head">
+            <h5>基础支撑知识库问题情况统计</h5>
+        </div>
+        <!-- 统计主体区域 -->
+        <div class="count-main">
+            <div class="time-select clearfix">
+                <select class="form-control" id="form-control">
+                    <option value="count-page1.html">数据对比</option>
+                    <option value="count-page3.html">单月数据</option>
+                    <option value="count-page2.html">跨月数据</option>
+                </select>
+                <select class="form-control" id="first-year">
+                    <option value="2017">2017 年</option>
+                    <option value="2016">2016 年</option>
+                </select>
+                <select class="form-control" id="first-month">
+                    <option value="1">1 月</option>
+                    <option value="2">2 月</option>
+                    <option value="3">3 月</option>
+                    <option value="4">4 月</option>
+                    <option value="5">5 月</option>
+                    <option value="6">6 月</option>
+                    <option value="7">7 月</option>
+                    <option value="8">8 月</option>
+                    <option value="9">9 月</option>
+                    <option value="10">10 月</option>
+                    <option value="11">11 月</option>
+                    <option value="12">12 月</option>
+                </select>
+                <span class="vs">VS</span>
+                <select class="form-control" id="second-year">
+                    <option value="2017">2017 年</option>
+                    <option value="2016">2016 年</option>
+                </select>
+                <select class="form-control" id="second-month">
+                    <option value="1">1 月</option>
+                    <option value="2">2 月</option>
+                    <option value="3">3 月</option>
+                    <option value="4">4 月</option>
+                    <option value="5">5 月</option>
+                    <option value="6">6 月</option>
+                    <option value="7">7 月</option>
+                    <option value="8">8 月</option>
+                    <option value="9">9 月</option>
+                    <option value="10">10 月</option>
+                    <option value="11">11 月</option>
+                    <option value="12">12 月</option>
+                </select>
+                <button class="btn btn-primary" type="button" id="create-echarts">生成</button>
+            </div>
+            <!-- 图表区域 -->
+            <div class="parent-width clearfix">
+                <div class="width50">
+                    <div class="echarts-one" id="echarts-one">
+                        <!--  <div class="echarts-head">
+                            <h5>0 年 0 月</h5>
+                        </div>
+                        <div class="echarts-body mt18 clearfix">
+                            <div class="left-countList">
+                                <ul>
+                                    <li class="clearfix">
+                                        <span class="name">问题统计</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                    <li>
+                                        <span class="name">已结案问题</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                    <li>
+                                        <span class="name">未结案问题</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                    <li class="mb0">
+                                        <span class="name">疑难问题</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right-countechart">
+                                <div class="echart1" id="echart1">
+                                </div>
+                                <div class="echart-content">
+                                    <div class="count1 clearfix">
+                                        <h6>问题总结案率:</h6>
+                                        <p>0%</p>
+                                    </div>
+                                    <div class="count2 clearfix">
+                                        <h6>问题总平均办理时长:</h6>
+                                        <p class="p1"><span>00</span>:<span>00</span>:<span>00</span></p>
+                                        <p class="p2"><span>hours</span> <span>minutes</span><span>seconds</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="width50">
+                    <div class="echarts-two" id="echarts-two">
+                        <!--  <div class="echarts-head">
+                            <h5>0 年 0 月</h5>
+                        </div>
+                        <div class="echarts-body mt18 clearfix">
+                            <div class="left-countList">
+                                <ul>
+                                    <li class="clearfix">
+                                        <span class="name">问题统计</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                    <li>
+                                        <span class="name">已结案问题</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                    <li>
+                                        <span class="name">未结案问题</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                    <li class="mb0">
+                                        <span class="name">疑难问题</span>
+                                        <span class="num"><em>0</em>个</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right-countechart">
+                                <div class="echart1" id="echart2">
+                                </div>
+                                <div class="echart-content">
+                                    <div class="count1 clearfix">
+                                        <h6>问题总结案率:</h6>
+                                        <p>0%</p>
+                                    </div>
+                                    <div class="count2 clearfix">
+                                        <h6>问题总平均办理时长:</h6>
+                                        <p class="p1"><span>00</span>:<span>00</span>:<span>00</span></p>
+                                        <p class="p2"><span>hours</span> <span>minutes</span><span>seconds</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="parent-width border clearfix">
+                <div class="width57">
+                    <div class="echarts-three">
+                        <div class="echarts-head">
+                            <h5>各条线问题数量对比</h5>
+                        </div>
+                        <div class="echarts-body clearfix">
+                            <div class="echart3" id="echart3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="width43">
+                    <div class="echarts-four">
+                        <div class="echarts-four">
+                            <div class="echarts-head">
+                                <h5>各条线问题平均办理时长对比</h5>
+                            </div>
+                            <div class="echarts-body clearfix">
+                                <div class="echart4" id="echart4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parent-width border clearfix">
+                <div class="width57">
+                    <div class="echarts-five">
+                        <div class="echarts-head">
+                            <h5>各条线问题处理情况对比</h5>
+                        </div>
+                        <div class="echarts-body clearfix">
+                            <div class="echart5" id="echart5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="width43">
+                    <div class="echarts-six">
+                        <div class="echarts-four">
+                            <div class="echarts-head">
+                                <h5>各条线问题结案率对比</h5>
+                            </div>
+                            <div class="echarts-body clearfix">
+                                <div class="echart6" id="echart6"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parent-width border clearfix">
+                <div class="width28">
+                    <div class="echarts-seven" id="echart-seven">
+                        <div class="echarts-head">
+                            <h5>各条线疑难问题情况对比</h5>
+                        </div>
+                        <div class="echarts-body clearfix">
+                            <div class="left-countcontrast">
+                                <div class="month-classic clearfix">
+                                    <span class="classic1">0月</span>
+                                    <span class="classic2">0月</span>
+                                </div>
+                                <ul>
+                                    <li class="clearfix">
+                                        <span class="name">移动研发</span>
+                                        <span class="num"><em class="firstNum">0</em>个</span>
+                                        <span class="num"><em class="secondNum">0</em>个</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="name">框架支撑</span>
+                                        <span class="num"><em class="firstNum">0</em>个</span>
+                                        <span class="num"><em class="secondNum">0</em>个</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="name">网站大师</span>
+                                        <span class="num"><em class="firstNum">0</em>个</span>
+                                        <span class="num"><em class="secondNum">0</em>个</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="name">前端支撑</span>
+                                        <span class="num"><em class="firstNum">0</em>个</span>
+                                        <span class="num"><em class="secondNum">0</em>个</span>
+                                    </li>
+                                    <li class="mb0 clearfix">
+                                        <span class="name">基础组件</span>
+                                        <span class="num"><em class="firstNum">0</em>个</span>
+                                        <span class="num"><em class="secondNum">0</em>个</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="width72">
+                    <div class="echarts-four">
+                        <div class="echarts-eight">
+                            <div class="echarts-head">
+                                <h5>各条线疑难问题处理情况对比</h5>
+                            </div>
+                            <div class="echarts-body clearfix">
+                                <div class="echart7" id="echart7"></div>
+                                <div class="echart8" id="echart8"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模板 t仪表盘-->
+    <script type="text/x-template" id="tmpl1">
+        <div class="echarts-head">
+            <h5>{{title}}</h5>
+        </div>
+        <div class="echarts-body mt18 clearfix">
+            <div class="left-countList">
+                <ul>
+                    <li class="clearfix">
+                        <span class="name">问题统计</span>
+                        <span class="num"><em>{{wttj}}</em>个</span>
+                    </li>
+                    <li>
+                        <span class="name">已结案问题</span>
+                        <span class="num"><em>{{yjawt}}</em>个</span>
+                    </li>
+                    <li>
+                        <span class="name">未结案问题</span>
+                        <span class="num"><em>{{wjawt}}</em>个</span>
+                    </li>
+                    <li class="mb0">
+                        <span class="name">疑难问题</span>
+                        <span class="num"><em>{{ynwt}}</em>个</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-countechart">
+                <div class="echart1" id="{{echart}}">
+                </div>
+                <div class="echart-content">
+                    <div class="count1 clearfix">
+                        <h6>问题总结案率:</h6>
+                        <p>{{wtzjal}}%</p>
+                    </div>
+                    <div class="count2 clearfix">
+                        <h6>问题总平均办理时长:</h6>
+                        <p class="p1"><span>{{wttime1}}</span>:<span>{{wttime2}}</span>:<span>00</span></p>
+                        <p class="p2"><span>hours</span> <span>minutes</span><span>seconds</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="js/zui/js/zui.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.xml.min.js"></script>
+    <script src="js/mustache.js"></script>
+    <script src="js/count-page1.js"></script>
+</body>
+
+</html>

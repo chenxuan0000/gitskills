@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <title>案例详情</title>
+    <script src="../../js/cssboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/lib/source/jquery.fancybox.css',
+        'js/lib/source/helpers/jquery.fancybox-buttons.css',
+        './css/case-detail.css'
+    ]);
+    </script>
+</head>
+
+<body>
+    <!-- 头 -->
+    <div id="header" class="header container"></div>
+    <!-- 内容 -->
+    <div class="main">
+        <div class="container" id="main">
+        </div>
+    </div>
+    <!-- 尾 -->
+    <div id="footer" class="footer"></div>
+    <!--模板-->
+    <script type="text/x-template" id="tmpl">
+        <div class="now-pos">
+            <a href="case.html">全部案例</a><span class="gt">&gt;</span>{{#Label.Category}}<a href="case.html?CategoryNum={{CategoryNum}}">{{CategoryName}}</a>{{/Label.Category}}<span class="gt">&gt;</span><span class="cur">{{Title}}</span>
+        </div>
+        <div class="intro-detail clearfix">
+            <div class="left">
+                <img src="{{ListImgUrl}}">
+            </div>
+            <div class="right">
+                <p class="item-name">{{Title}}</p>
+                <p class="item-label">标签：{{#Label.Category}}<a href="case.html?CategoryNum={{CategoryNum}}" class="blue">{{CategoryName}}</a>{{/Label.Category}} {{#Label.CaseTypeList.Info}}
+                    <a href="case.html?CaseType={{value}}" class="blue">{{text}}</a>{{/Label.CaseTypeList.Info}} {{#Label.CaseFangXiangList.Info}}
+                    <a href="case.html?CaseFangXiang={{value}}" class="blue">{{text}}</a>{{/Label.CaseFangXiangList.Info}}
+                    <div class="right-block">
+                        <ul>
+                            <li class="clearfix">
+                                <div class="one">项目编号</div>
+                                <div class="two">{{ProjectNum}}</div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="one">客户单位</div>
+                                <div class="two">{{CustomerUnit}}</div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="one">项目成员</div>
+                                <div class="two">{{ProjectMemberName}}</div>
+                            </li>
+                            <li class="clearfix">
+                                <div class="one">快捷访问</div>
+                                <div class="look two">
+                                    {{#FormalWebUrl}}
+                                    <a target="_blank" href="{{FormalWebUrl}}" title="浏览上线网站" class="computer"></a>
+                                    {{/FormalWebUrl}} {{#APPImgUrl}}
+                                    <a class="tel">
+                                        <div class="code">
+                                            <div class="img-div">
+                                                <img src="{{APPImgUrl}}" alt="加载图片失败">
+                                            </div>
+                                            <span>安装移动端产品</span>
+                                        </div>
+                                    </a>
+                                    {{/APPImgUrl}} {{#TestWebUrl}}
+                                    <a target="_blank" href="{{TestWebUrl}}" title="访问测试demo" class="file"></a>
+                                    {{/TestWebUrl}}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right-download">
+                        <a href="#bigDown" class="down">全部案例</a><span>下载量：{{DownNum}}次</span>
+                    </div>
+            </div>
+        </div>
+        <!-- 图片展示 -->
+         {{^InfoContent}}
+        <div class="img-list" id="img-list">没有正文</div>
+        {{/InfoContent}}     
+        {{#InfoContent}}
+        <div class="img-list" id="img-list">{{{InfoContent}}}</div>
+        {{/InfoContent}}        
+        <!-- 案例附件下载 -->
+        {{^SingleAttachList}}
+        <div class="ht50">
+            <div id="bigDown" class="bigFile-download clearfix">
+                <div class="left-list">
+                    <ul class="clearfix">
+                        <li class="name-cur">无附件</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{/SingleAttachList}} {{#SingleAttachList}}
+        <div class="ht50">
+            <div id="bigDown" class="bigFile-download clearfix">
+                <div class="left-list">
+                    <ul class="clearfix">
+                        <li class="name-cur">附件</li>
+                        {{#AttachItem}}
+                        <li>
+                            <span class="single-down" data-type="{{InfoGuid}}" data-id="{{AttachUrl}}">{{AttachFileName}}</span>
+                        </li>
+                        {{/AttachItem}}
+                    </ul>
+                </div>
+                <a href="{{PackageAttachUrl}}" class="all-dn">一键下载</a>
+            </div>
+        </div>
+        {{/SingleAttachList}}
+        <!-- 上一个下一个案例 -->
+        <div class="pre-next clearfix" id="pre-next">
+            {{^PrevInfo.Title}}
+            <span class="pre">已经是第一条了</span>{{/PrevInfo.Title}} {{#PrevInfo.Title}}
+            <a href="javascript:void(0);" data-id="{{PrevInfo.InfoGuid}}" class="pre">{{PrevInfo.Title}}</a>{{/PrevInfo.Title}} {{^NextInfo.Title}}
+            <span class="next">已经是最后一条了</span>{{/NextInfo.Title}} {{#NextInfo.Title}}
+            <a href="javascript:void(0);" data-id="{{NextInfo.InfoGuid}}" class="next">{{NextInfo.Title}}</a>{{/NextInfo.Title}}
+        </div>
+        <!-- 返回顶部 -->
+        <div class="back-top" id="backTop">
+        </div>
+    </script>
+    <script src="../../js/jsboot.js"></script>
+    <script>
+    SrcBoot.output([
+        'js/lib/source/jquery.fancybox.js',
+        'js/lib/source/helpers/jquery.fancybox-buttons.js',
+        'js/lib/bootstrap.min.js',
+        './js/case-detail.js'
+    ]);
+    </script>
+</body>
+
+</html>

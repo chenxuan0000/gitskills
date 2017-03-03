@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="../css/slideshow.css" rel="stylesheet" />
+    <link href="../js/layer/skin/layer.css" rel="stylesheet" />
+    <script src="../js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="banner">
+        <div class="comiis_wrapad" id="slideContainer">
+            <div id="frameHlicAe" class="frame cl">
+                <div class="temp"></div>
+                <div class="block">
+                    <div class="cl">
+                        <ul class="slideshow" id="slidesImgs">
+                            <li>
+                                <img src="../images/banner1.jpg" width="100%" /></li>
+                            <li>
+                                <img src="../images/banner2.jpg" width="100%" /></li>
+                            <li>
+                                <img src="../images/banner3.jpg" width="100%" /></li>
+                            <li>
+                                <img src="../images/banner4.jpg" width="100%" /></li>
+                        </ul>
+                    </div>
+                    <div class="slidebar" id="slideBar">
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="auto">
+            <div class="banner-float" id="date-weather">
+                <div class="rili">
+                    <div class="rili-top">
+                        <span class="date"></span>
+                        <span class="mon"></span>
+                    </div>
+                    <div class="rili-detail">
+                        <span class="day"></span>
+                        <p class="cn-day"></p>
+                        <p class="cn-year"></p>
+                    </div>
+                </div>
+                <div class="tianqi">
+                <iframe allowtransparency="true" frameborder="0" width="140" height="128" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=1&v=1&d=1&bd=0&k=&f=&q=1&e=1&a=1&c=60298&w=140&h=128&align=center"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="maincontent auto">
+        <div class="section news fl">
+            <div class="tit">
+                <h1><a href="javascript:;">新闻</a></h1>
+                <a href="../news/xinwen.html">查看更多 &gt;&gt;</a>
+            </div>
+            <div class="content news-content">
+                <div class="tab-nav">
+                    <a href="javascript:;" class="tab-cur">图文资讯</a>
+                    <a href="javascript:;">推荐</a>
+                    <div style="clear:both"></div>
+                </div>
+                <div class="tab-wrap">
+                    <div class="detail tuwen" id="all-news">
+                        <div class="detail-t">
+                        </div>
+                        <div class="detail-list">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail tuijian" style="display:none;" id="recomd-news">
+                        <div class="detail-t">
+                        </div>
+                        <div class="detail-list">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section huodong fr">
+            <div class="tit">
+                <h1><a href="javascript:;">活动</a></h1>
+                <a href="../activity/huodong.html">查看更多 &gt;&gt;</a>
+            </div>
+            <div class="content news-content">
+                <div class="tab-nav">
+                    <li>投票&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                    <li>答题&nbsp;&nbsp;|&nbsp;&nbsp;</li>
+                    <li>调查问卷 </li>
+                    <div style="clear:both"></div>
+                </div>
+                <div class="tab-wrap-h">
+                    <div class="detail" id="toupiao">
+                        <div class="detail-t">
+                            <div class="left fl">
+                            </div>
+                            <div class="right fr">
+                                <div class="title">
+                                </div>
+                                <div class="right-list">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div>
+                    <div class="detail" style="display:none" id="dati">
+                        <div class="detail-t">
+                            <div class="left fl">
+                            </div>
+                            <div class="right fr">
+                                <div class="title">
+                                </div>
+                                <div class="right-list">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div>
+                    <div class="detail" style="display:none" id="diaocha">
+                        <div class="detail-t">
+                            <div class="left fl">
+                            </div>
+                            <div class="right fr">
+                                <div class="title">
+                                </div>
+                                <div class="right-list">
+                                    <ul>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section shenghuo fr">
+            <div class="tit">
+                <h1><a href="javascript:;">生活</a></h1>
+                <a href="../life/shenghuo.html">查看更多 &gt;&gt;</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="../life/lvyou.html"><img src="../images/icon_08.png">&nbsp;&nbsp;旅游</a>
+                </li>
+                <li>
+                    <a href="../life/lvyou.html"><img src="../images/icon_09.png">&nbsp;&nbsp;美食</a>
+                </li>
+                <li>
+                    <a href="../life/lvyou.html"><img src="../images/icon_10.png">&nbsp;&nbsp;住宿</a>
+                </li>
+                <li>
+                    <a href="../life/lvyou.html"><img src="../images/icon_11.png">&nbsp;&nbsp;购物</a>
+                </li>
+                <li>
+                    <a href="../life/lvyou.html"><img src="../images/icon_12.png">&nbsp;&nbsp;休闲</a>
+                </li>
+                <li>
+                    <a href="../life/lvyou.html"><img src="../images/icon_13.png">&nbsp;&nbsp;文化</a>
+                </li>
+                <div style="clear:both"></div>
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+        <div class="section bianmin">
+            <div class="tit">
+                <h1><a href="#">便民</a></h1>
+            </div>
+            <div class="bianmin-wrap">
+                <div class="bianmin-icon">
+                    <li>
+                        <a target="_blank" href="http://lyjs.eastday.com/lyj/Scenic_A/index_k26.html"><img src="../images/icon_19.png"></a>
+                    </li>
+                    <span>景区实时信息</span>
+                </div>
+                <div class="bianmin-icon">
+                    <li>
+                        <a target="_blank" href="http://www.lotusoftec.com/wxapp/wx/index.jsp?setupid=3"><img src="../images/icon_21.png"></a>
+                    </li>
+                    <span>上海食药监</span>
+                </div>
+                <div class="bianmin-icon">
+                    <li>
+                        <a target="_blank" href="http://wap.sh.gov.cn/nw2/nw32587/nw32598/nw32600/index.html"><img src="../images/icon_18.png"></a>
+                    </li>
+                    <span>出入境管理</span>
+                </div>
+                <div class="bianmin-icon">
+                    <li>
+                        <a target="_blank" href="#"><img src="../images/icon_16.png"></a>
+                    </li>
+                    <span>招贤纳士</span>
+                </div>
+                <div class="bianmin-icon">
+                    <li>
+                        <a target="_blank" href="#"><img src="../images/icon_15.png"></a>
+                    </li>
+                    <span>奉贤公交</span>
+                </div>
+                <div class="bianmin-icon">
+                    <li>
+                        <a target="_blank" href="http://m.shgjj.com/verifier/verifier/index"><img src="../images/icon_17.png"></a>
+                    </li>
+                    <span>个人公积金查询</span>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <!-- 新闻列表 第一条展示 -->
+    <script type="text/template" id="template1">
+        <div class="left fl">
+            <img src="{{Image1}}">
+        </div>
+        <div class="right fr">
+            <div class="title">
+                <li><a target="_blank" href="../news/xinwen-xiangqing.html?id={{ID}}">{{Title}}</a></li>
+            </div>
+            <div class="text">
+                <p>3月28日是第21个全国中小学生安全教育日。我区中小幼学校纷纷开展消防疏散、防震避险、反恐防入侵等演练和交通安全教育等各类活动，进一步增进了师生对安全的了解，提高了师生的安全意识，为创建平安和.....</p>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+    </script>
+    <!-- 新闻列表 除去第一条展示 -->
+    <script type="text/template" id="template2">
+        {{#rows}}
+        <li>
+            <a target="_blank" href="../news/xinwen-xiangqing.html?id={{ID}}">{{Title}}</a><span>[{{Time}}]</span>
+        </li>
+        {{/rows}}
+    </script>
+    <!--活动列表 除去第一条展示 -->
+    <script type="text/template" id="template3">
+        {{#rows}}
+        <li><a target="_blank" href="../activity/toupiao.html?id={{ID}}">{{Title}}</a></li>
+        {{/rows}}
+    </script>
+    <script type="text/javascript" src="../js/jquery.placeholder.min.js"></script>
+    <script src="../js/slideshow.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../js/layer/layer.js"></script>
+    <script type="text/javascript" src="../js/mustache.js"></script>
+    <script type="text/javascript" src="../js/date/getCnDate.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+</body>
+
+</html>

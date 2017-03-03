@@ -1,0 +1,212 @@
+/**!
+ * 海安县政务网二级
+ * author: shenyh;
+ * date:2016-07-12;
+ */
+
+/*搜索框*/
+.search-block {
+    height: 30px;
+    width: 321px;
+    margin-top: 9px;
+    margin-right: 25px;
+    border: 1px solid #168ed5;
+}
+
+.ewb-r-txt {
+    width: 81%;
+    text-indent: 13px;
+    height: 30px;
+    line-height: 30px;
+    line-height: 28px;
+    border: 0;
+}
+
+.ewb-r-btn1 {
+    width: 19%;
+    height: 30px;
+    margin-top: -0.5px;
+    border: 0;
+    cursor: pointer;
+    background: url(../images/right_btn.png) 17px 4px no-repeat #168ed5;
+}
+
+/* 左侧菜单树 */
+
+.ewb-left-hd {
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    background: #378ce9;
+}
+
+.ewb-left-bd {
+    height: 700px;
+    border-top: 0;
+    overflow: hidden;
+}
+
+.ewb-left-bd .subbg {
+    position: absolute;
+    width: 274px;
+    height: 701px;
+    z-index: -1;
+}
+
+.wb-tree {
+    width: 242px;
+    height: 370px;
+    overflow: auto;
+    margin: 12px auto 0;
+}
+
+.wb-tree-items {
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.wb-tree-items.special a {
+    font-size: 14px;
+}
+
+.wb-tree-tt {
+    color: #333;
+}
+
+.wb-tree-item>a,
+.wb-tree-tt {
+    display: inline-block;
+    width: 190px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.wb-tree-item>a {
+    width: 205px;
+}
+
+.wb-tree-node,
+.wb-tree-sub a {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #eee;
+}
+
+.wb-tree-iconl {
+    float: left;
+    width: 4px;
+    height: 38px;
+    margin-top: -1px;
+    margin-left: -1px;
+    margin-right: 20px;
+    background-color: #aaa;
+}
+
+.wb-tree-iconr {
+    float: right;
+    width: 12px;
+    height: 12px;
+    margin-top: 12px;
+    margin-right: 10px;
+    background: url(../images/wblistr.jpg) no-repeat;
+}
+
+.wb-tree-sub {
+    display: none;
+    /*border: 1px solid #eee;*/
+    border: 0;
+}
+
+.wb-tree-item>a {
+    height: 38px;
+    line-height: 38px;
+    padding-left: 35px;
+    font-size: 14px;
+    background-color: #fff;
+    border: none;
+}
+
+.wb-tree-item>a:hover {
+    background-color: #378ce9;
+    color: #fff;
+}
+
+.wb-tree-item>a:active {
+    background-color: #e9f3fd;
+    color: #333;
+}
+
+.current .wb-tree-tt {
+    color: #378ce9;
+}
+
+.current .wb-tree-iconl {
+    background-color: #378ce9;
+}
+
+.current .wb-tree-iconr {
+    background: url(../images/wblistrh.jpg) no-repeat;
+}
+
+.current .wb-tree-sub {
+    display: block;
+}
+
+
+/* 右侧 */
+
+.ewb-scol {
+    border: 1px solid #eaeaea;
+    border-top: 2px solid #378ce9;
+}
+
+.ewb-scol-hd {
+    height: 50px;
+    border-bottom: 1px solid #f7f6f7;
+}
+
+.ewb-scol-tt {
+    float: left;
+    line-height: 50px;
+    padding-left: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    background: url(../images/stt.jpg) 18px 19px no-repeat;
+}
+
+.ewb-scol-tt a {
+    color: #378ce9;
+}
+
+.ewb-scol-bd {
+    height: 689px;
+}
+
+.ewb-list-bd {
+    height: 634px;
+}
+
+
+/* 页码样式 */
+
+.pager {
+    margin-left: 30px;
+}
+
+.m-pagination-size > select {
+    padding: 0 2px;
+}
+
+.m-pagination-group > input {
+    width: 40px;
+}
+
+.m-pagination-group > button {
+    padding: 0 6px;
+}

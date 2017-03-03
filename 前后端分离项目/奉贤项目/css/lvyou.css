@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.news-banner img {
+    width: 1022px;
+}
+
+.public-top {
+    height: 50px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.public-h3 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #47abd5;
+    margin-right: 100px;
+}
+
+.public-h3 img {
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.public-top .span1,
+.public-top .span2,
+.public-top .span3 {
+    font-size: 16px;
+    color: #808080;
+    margin-right: 15px;
+    padding-left: 30px;
+    display: block;
+    margin-top: 10px;
+    float: left;
+    line-height: 25px;
+}
+
+.span1 {
+    background: url(../images/jindian2.png) no-repeat left center;
+}
+
+.span2 {
+    background: url(../images/jieqing2.png) no-repeat left center;
+}
+
+.span3 {
+    background: url(../images/xinshe2.png) no-repeat left center;
+}
+
+.span1.current {
+    background: url(../images/jindian1.png) no-repeat left center;
+}
+
+.span2.current {
+    background: url(../images/jieqing1.png) no-repeat left center;
+}
+
+.span3.current {
+    background: url(../images/xinshe1.png) left center no-repeat;
+}
+
+.public-top a.current,
+.public-top span.current {
+    color: #47abd5;
+}
+
+.right-select {
+    width: 100%;
+    margin: 6px 0;
+}
+
+.right-select select {
+    width: 194px;
+    height: 33px;
+    border: none;
+    font: 14px/33px Microsoft YaHei;
+    color: #333;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px 0 5px 16px;
+    border: 1px solid #d9d9d9;
+}
+
+.detail>ul {
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+.detail .first-li {
+    width: 248px;
+    height: 230px;
+    background: #f2f2f2;
+    color: #333;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.detail .second-li {
+    width: 334px;
+    height: 217px;
+    background: #f2f2f2;
+    color: #333;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.detail .second-li .shade {
+    width: 324px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    z-index: 22;
+    margin-left: 10px;
+}
+
+.detail .second-li .shade a {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    float: left;
+    width: 205px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.detail .second-li .xing {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.detail .second-li .time {}
+
+.detail .second-li img {
+    width: 334px;
+    height: 216px;
+}
+
+.detail .second-li .opa {
+    height: 40px;
+    background: #333;
+    position: absolute;
+    bottom: 0;
+    width: 334px;
+    height: 40px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    left: 0;
+}
+
+.detail .first-li img {
+    width: 248px;
+    height: 150px;
+}
+
+.detail .first-li p {
+    font-size: 15px;
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+.detail .first-li span {
+    font-size: 14px;
+    display: block;
+    margin-right: 18px;
+}
+
+.xing {
+    margin-left: 10px;
+}
+
+.xing li {
+    background: url(../images/xing_huang.png) no-repeat -20px center;
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.xing li.cur {
+    background: url(../images/xing_huang.png) no-repeat 0 center;
+}
+
+.fff {
+    color: #fff;
+    padding-left: 5px;
+    display: block;
+    width: 230px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*覆盖*/
+
+.slidebar {
+    left: 410px;
+}
+
+#slidesImgs>li>img {
+    width: 1024px;
+    height: 320px;
+}
+
+#xinshe,
+#jieqing {
+    display: none;
+}
+
+.pager {
+    float: left;
+    width: 100%;
+    height: 50px;
+    padding: 20px 26px;
+}
+
+#xinshe p {
+    position: absolute;
+    z-index: 99;
+    margin-top: -38px;
+}
+
+#xinshe .opa {
+    position: absolute;
+    display: block;
+    width: 248px;
+    height: 35px;
+    opacity: 0.7;
+    background: #555;
+    margin-top: -39px;
+    filter: alpha(opacity=70);
+}
+
+#xinshe .title-pc {
+    padding-left: 15px;
+    line-height: 30px;
+}
+
+#xinshe .xing {
+    margin-left: 15px;
+    line-height: 30px;
+}
+
+#xinshe li {
+    height: 220px;
+}

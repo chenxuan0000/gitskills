@@ -1,0 +1,146 @@
+/**!
+ * [页面名称]:质量改进图表内套页面
+ * author: [chenxuan];
+ */
+ul,
+p,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+.quality-improve {
+    width: 820px;
+}
+
+.count-block {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-right: 0;
+}
+
+.count-block ul {
+    padding: 0;
+    margin: 0;
+}
+
+.count-block li {
+    float: left;
+    margin: 0;
+    padding-top: 16px; 
+    padding-left: 20px;
+    width: 163.8px;
+    height: 78px;
+    border-right: 1px solid #ddd;
+}
+
+.count-block li p {
+    margin: 0;
+}
+
+.num {
+    color: #0069b7;
+    font-size: 24px;
+}
+
+/*echart 区域*/
+
+.left-echart,
+.right-echart {
+    float: left;
+    width: 478px;
+    height: 304px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+.right-echart {
+    float: right;
+    width: 321px;
+}
+
+.echart-title {
+    height: 22px;
+    line-height: 15px;
+    border-bottom: 1px solid #e3e6e8;
+    margin: 15px 20px 0 17px;
+}
+
+.underline {
+    padding: 0 4px 5px;
+    color: #1065b6;
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 1px solid #1065b6;
+}
+.echart1 {
+    width: 475px;
+    height: 258px;
+}
+.echart2 {
+    width: 315px;
+    height: 260px;
+}
+.echart2-count {
+    position: absolute;
+    margin-top: 40.4px;
+    margin-left: 310px;
+    font-size: 13px;
+    background-color: #fff;
+}
+.echart2-count li {
+    margin-bottom: 13.7px;
+}
+.echart2-count .num,
+.echart2-count .percent {
+    color: #ff9100;
+    font-size: 15px;
+    font-weight: bold;
+}
+.echart3 {
+    width: 478px;
+    height: 305px;
+}
+.left-echart2 {
+    height: 352px;
+}
+.right-echart2 {
+    height: 352px;
+}
+.echart4 {
+    width: 320px;
+    height: 305px;
+}
+
+/* 各研发群问题办结率排行 */
+.rank { 
+    margin: 0;
+    padding: 0;
+    padding-left: 17px;
+    width: 299px;
+}
+.rank li {
+    padding: 6px 0 9px;
+    border-bottom: 1px solid #c9c9c9;
+}
+.rank-num {
+    padding-left: 7px;
+    padding-right: 15px;
+    color: #323232;
+    font-size: 24px;
+}
+.rank-r p {
+    margin: 0;
+}
+.data-num {
+    font-size: 16px;
+    font-family: normal;
+}
+.rank-box {
+    width: 246px;
+    height: 12px;
+    background: #d8eefc;
+}
+.rank-percent {
+    height: 12px;
+    background: #37adf3;
+}

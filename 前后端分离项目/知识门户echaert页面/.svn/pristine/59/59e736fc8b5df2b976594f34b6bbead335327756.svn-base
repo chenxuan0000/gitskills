@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="js/zui/css/zui.min.css" />
+    <link rel="stylesheet" href="css/quality-improve.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <title>质量改进图表内套页面</title>
+</head>
+
+<body>
+    <div class="quality-improve center-block">
+        <!-- tabs -->
+        <div class="tabs">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="###" data-target="#six-month" data-toggle="tab">近6个月</a>
+                </li>
+                <li class="active">
+                    <a href="###" data-target="#last-month" data-toggle="tab">上个月</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!-- 近6个月 -->
+                <div class="tab-pane fade" id="six-month">
+                1
+                </div>
+                <!-- 上个月 -->
+                <div class="tab-pane fade active in" id="last-month">
+                    <div class="count-block">
+                        <ul class="clearfix">
+                            <li>
+                                <p>问题总计</p>
+                                <p><span class="num">1222</span>个</p>
+                            </li>
+                            <li>
+                                <p>问题总计</p>
+                                <p><span class="num">1222</span>个</p>
+                            </li>
+                            <li>
+                                <p>问题总计</p>
+                                <p><span class="num">1222</span>个</p>
+                            </li>
+                            <li>
+                                <p>问题总计</p>
+                                <p><span class="num">1222</span>个</p>
+                            </li>
+                            <li>
+                                <p>问题总计</p>
+                                <p><span class="num">1222</span>个</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/zui/js/zui.min.js"></script>
+</body>
+
+</html>

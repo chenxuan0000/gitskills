@@ -1,0 +1,76 @@
+/**!
+ * [页面名称]:质量改进图表内套页面
+ * author: [chenxuan];
+ */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+.count-head {
+   height: 102px;
+   text-align: center;
+}
+.count-head h5 {
+   line-height: 102px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.count-main .time-select {
+  height:42px;
+  border-top: 1px solid #dedede; 
+  background-color: #f7f7f7;
+}
+
+.count-main .parent-width {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.parent-width .width50 {
+  float: left;
+  width: 50%;
+}
+.echarts-one,
+.echarts-two  {
+  margin-right: 10px;
+  padding: 0 20px;
+  height: 320px;
+  border: 1px solid #ddd;
+}
+.echarts-two {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.echarts-head {
+  height: 43px;
+  border-bottom: 1px solid #ddd;
+}
+.echarts-body {
+  margin-top: 18px; 
+}
+.echarts-body .left-countList {
+  float: left;
+  padding-right: 18px;
+  border-right: 1px solid #ddd;
+  width: 40%;
+}
+
+.left-countList li {
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 13px;
+  background-color: #f5fafd;
+  color: #1363b8;
+  border-left: 2px solid #1363b8;
+}
+
+.left-countList li.mb0 {
+  margin-bottom: 0;
+}

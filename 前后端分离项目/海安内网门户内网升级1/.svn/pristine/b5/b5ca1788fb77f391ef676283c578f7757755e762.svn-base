@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <embed wmode="transparent" src="http://yuntv.letv.com/bcloud.swf" allowfullscreen="true" quality="high" width="650" height="425" align="middle" allowscriptaccess="always" flashvars="uu=cbedbf1ce4&amp;vu=d8d281dd99&amp;pu=12345abcde&amp;auto_play=1&amp;width=650&amp;height=425" type="application/x-shockwave-flash">
+</body>
+<script type="text/javascript">
+// console.log(document.getElementsByTagName('embed'));
+// console.log(document.getElementById('video'));
+// document.getElementsByTagName('embed').addEventListener("ended", myFunction);
+// function myFunction() {
+//     alert("开始加载视频");
+// }
+// var player: EventDispatcher = getLetvPlayer(); //获取乐视播放器实例
+// var api: Object = player.api; //获取乐视播放器Flash平台接口
+// var versions: Object = api[CallBackAPI.GET_VERSION]();
+// trace(versions["main"]);
+</script>
+
+</html>

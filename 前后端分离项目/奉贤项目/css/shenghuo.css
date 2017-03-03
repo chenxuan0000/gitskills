@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.news-banner img{width: 100%;}
+
+.life-menu{margin:20px 0 45px -129px;}
+.life-menu li{float: left;width: 63px;text-align: center;font-size: 14px;color:#666;margin-left:129px;}
+
+
+
+
+.public-top{height: 50px;border-bottom:1px solid #d9d9d9;}
+.public-h3{font-weight: normal;font-size: 20px;color:#47abd5;margin-right: 100px;}
+.public-h3 img{  vertical-align: middle;margin-right: 10px;}
+.right-more a{font-size: 12px;color:#999;}
+
+.list1-wrap{margin-bottom: 40px;}
+.list1-wrap>ul{margin-left: -10px;margin-top: 10px;}
+.list1-wrap>ul>li{width: 334px;height: 190px;background:#f2f2f2;color:#333;float: left;margin-left: 10px;margin-top: 10px;position:relative;}
+.list1-wrap>ul>li img{width: 334px;height: 190px;}
+
+.list1-wrap>ul>li .shade{width: 324px;height: 40px;position:absolute;bottom:0;z-index:22;margin-left: 10px;}
+.list1-wrap>ul>li .shade a{font-size: 16px;height: 40px;line-height: 40px;color:#fff;  max-width: 208px;float: left;overflow:hidden;}
+.list1-wrap>ul>li .opa{height: 40px;background:#333;position:absolute;bottom:0;width: 334px;height: 40px;opacity:0.8;filter:alpha(opacity=80);left:0;}
+.list1-wrap>ul>li .xing {margin-top: 10px;}
+.xing li{background:url(../images/icon_30.png) no-repeat -20px center;width:20px;height: 20px;float: left;   }
+.xing li.cur{background:url(../images/icon_30.png) no-repeat 0 center;}
+
+
+
+
+
+
+.list-wrap>ul{margin-left: -10px;margin-top: 10px;}
+.list-wrap>ul>li{width: 248px;height: 265px;background:#f2f2f2;color:#333;float: left;margin-left: 10px;margin-top: 10px;}
+.list-wrap>ul>li img{width: 248px;height: 150px;}
+
+.list-wrap>ul>li p{font-size: 16px;line-height: 45px;margin-left: 10px;}
+.list-wrap>ul>li span{font-size: 14px;display: block;margin-top: 10px;margin-left: 10px;}
+.xing{margin-left: 10px;}
+.listwrap .xing{float:none!important}
+.xing li{background:url(../images/xing_huang.png) no-repeat -20px center;width:20px;height: 20px;float: left;   }
+.xing li.cur{background:url(../images/xing_huang.png) no-repeat 0 center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
