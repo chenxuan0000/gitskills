@@ -1,4 +1,16 @@
 (function(win, $) {
+    $("img.lazy").lazyload({
+        effect: "fadeIn",
+        load: function(elements_left, settings) {
+            $(this).uberZoom({
+                width: 550,
+                height: 290,
+                fullscreen : true
+            });
+        }
+    });
+
+    
     var dataStyle = {
         normal: {
             label: { show: false },
@@ -18,7 +30,7 @@
         }
     };
     var legendData1 = ['html,css', 'js', 'jq', 'html5', 'css3'];
-    var legendData2 = ['echart等插件','mustache,mock', 'node', 'angularjs', 'canvas'];
+    var legendData2 = ['echart等插件', 'mustache,mock', 'node', 'angularjs', 'canvas'];
 
     var getInit = function(myData) {
         return {
@@ -28,18 +40,18 @@
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             legend: {
-            	top: 20,
+                top: 20,
                 itemGap: 12,
                 data: myData,
-                textStyle : {
-                	color:'#fff'
+                textStyle: {
+                    color: '#fff'
                 }
             },
             series: [{
                     name: 'Line 1',
                     type: 'pie',
                     clockWise: false,
-                    center : ['50%' ,'60%'],
+                    center: ['50%', '60%'],
                     radius: [180, 200],
                     itemStyle: dataStyle,
                     hoverAnimation: false,
@@ -58,7 +70,7 @@
                     name: 'Line 2',
                     type: 'pie',
                     clockWise: false,
-                    center : ['50%','60%'],
+                    center: ['50%', '60%'],
                     radius: [160, 180],
                     itemStyle: dataStyle,
                     hoverAnimation: false,
@@ -75,7 +87,7 @@
                     name: 'Line 3',
                     type: 'pie',
                     clockWise: false,
-                    center : ['50%','60%'],
+                    center: ['50%', '60%'],
                     hoverAnimation: false,
                     radius: [140, 160],
                     itemStyle: dataStyle,
@@ -92,7 +104,7 @@
                     name: 'Line 4',
                     type: 'pie',
                     clockWise: false,
-                    center : ['50%','60%'],
+                    center: ['50%', '60%'],
                     hoverAnimation: false,
                     radius: [120, 140],
                     itemStyle: dataStyle,
@@ -110,7 +122,7 @@
                     type: 'pie',
                     clockWise: false,
                     hoverAnimation: false,
-                    center : ['50%','60%'],
+                    center: ['50%', '60%'],
                     radius: [100, 120],
                     itemStyle: dataStyle,
 
