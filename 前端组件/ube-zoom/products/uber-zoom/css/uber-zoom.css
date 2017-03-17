@@ -1,0 +1,451 @@
+.ndd-uberzoom-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.ndd-uberzoom-container img.ndd-uberzoom-main-image {
+	opacity: 0;
+	width: 100%;
+	height: auto;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ndd-uberzoom-container:hover .ndd-uberzoom-interface {
+	opacity: 1;
+}
+
+.ndd-uberzoom-interface {
+	opacity: 0;
+	transition: opacity 0.75s;
+	-moz-transition: opacity 0.75s;
+	-webkit-transition: opacity 0.75s;
+}
+
+.ndd-uberzoom-navigator, .ndd-uberzoom-fullscreen {
+	position: absolute;
+	background: rgba(0,0,0,0.75);
+	border: 1px solid rgba(255,255,255,0.25);
+	border-radius: 3px;
+	cursor: pointer;
+	overflow: hidden;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+
+.ndd-uberzoom-fullscreen img {
+	width: 28px;
+	height: 28px;
+	margin: 8px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ndd-uberzoom-navigator-image {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	z-index: 0;
+}
+
+.ndd-uberzoom-navigator-window {
+	position: absolute;
+	background: rgba(255,255,255,0.5);
+	border-radius: 2px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	z-index: 1;
+}
+
+.ndd-uberzoom-fullscreen {
+	width: 44px;
+	height: 44px;
+}
+
+.ndd-uberzoom-fullscreen:active {
+	background: rgba(255,255,255,0.25);
+}
+
+.ndd-uberzoom-container-fullscreen {
+	position: fixed;
+	z-index: 90000;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: black;
+}
+
+/* SPOTS */
+
+.ndd-spot {
+	position: absolute;
+	width: 44px;
+	height: 44px;
+	margin-left: -22px;
+	margin-top: -22px;
+}
+
+.ndd-spot-rect {
+	position: absolute;
+}
+
+
+/* POPUPS */
+
+#ndd-annotations-global-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 999999;
+}
+
+.ndd-popup-buffer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+.ndd-popup-container {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 0;
+	/*width: 0px;*/
+	/*height: 0px;*/
+	z-index: 9999999;
+}
+
+.ndd-popup-container.ndd-popup-visible {
+	display: block;
+}
+
+.ndd-popup-box {
+	/*position: absolute;*/
+	/*left: 0;*/
+	/*top: 0;*/
+	position: relative;
+	z-index: 1;
+	width: auto;
+	height: auto;
+	background: rgba(0, 0, 0, 1);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.ndd-popup-content {
+	padding: 20px;
+}
+
+.ndd-popup-content h1 {
+	font: 18px sans-serif;
+	/*color: white;*/
+	margin: 0;
+}
+
+.ndd-popup-content p {
+	font: 12px sans-serif;
+	/*color: white;*/
+	margin-top: 10px;
+}
+
+/* arrows */
+
+.ndd-popup-arrow-up {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	
+	border-bottom: 10px solid rgba(0, 0, 0, 1);
+}
+
+.ndd-popup-arrow-down {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid rgba(0, 0, 0, 1);
+}
+
+.ndd-popup-arrow-right {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	
+	border-left: 10px solid rgba(0, 0, 0, 1);
+}
+
+.ndd-popup-arrow-left {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	
+	border-right:10px solid rgba(0, 0, 0, 1); 
+}
+
+/* CIRCLE SPOT */
+
+.ndd-marker-container {
+	z-index: 0;
+	width: 44px;
+	height: 44px;
+}
+
+.ndd-marker-container .ndd-marker-main, .ndd-marker-container .ndd-marker-border {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+
+.ndd-marker-container .ndd-marker-main {
+	display: block;
+	position: absolute;
+}
+
+.ndd-marker-style-1 .ndd-marker-main {
+	background: rgba(0, 0, 0, 1);
+	border-radius: 100px;
+	width: 44px;
+	height: 44px;
+}
+
+.ndd-marker-style-2 .ndd-marker-main {
+	background: rgba(0, 0, 0, 1);
+	border-radius: 100px;
+	width: 34px;
+	height: 34px;
+	left: 5px;
+	top: 5px;
+}
+
+.ndd-marker-style-2 .ndd-marker-border {
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	border: 4px solid rgba(0, 0, 0, 1);
+	border-radius: 100px;
+}
+
+.ndd-marker-style-3 .ndd-marker-main {
+	display: block;
+	background: rgba(0, 0, 0, 1);
+	border-radius: 100px;
+	width: 38px;
+	height: 38px;
+	margin: 3px;
+}
+
+.ndd-marker-style-3 .ndd-marker-border {
+	position: absolute;
+	display: block;
+	width: 42px;
+	height: 42px;
+	border: 1px solid rgba(0, 0, 0, 1);
+	border-radius: 100px;
+}
+
+.ndd-marker-style-4 .ndd-marker-main {
+	display: block;
+	background-color: transparent !important;
+	border-radius: 100px;
+	width: 34px;
+	height: 34px;
+	margin: 5px;
+}
+
+.ndd-marker-style-4 .ndd-marker-border {
+	position: absolute;
+	display: block;
+	width: 36px;
+	height: 36px;
+	border: 4px solid rgba(0, 0, 0, 1);
+	border-radius: 100px;
+}
+
+.ndd-marker-style-5 img, .ndd-marker-style-6 img, .ndd-marker-style-7 img, .ndd-marker-style-8 img, .ndd-marker-style-9 img, .ndd-marker-style-10 img, .ndd-marker-style-11 img, .ndd-marker-style-12 img, .ndd-marker-style-13 img {
+	width: 44px;
+	height: 44px;
+}
+
+.ndd-marker-style-0 .ndd-marker-main {
+	background: transparent !important;
+}
+
+.ndd-marker-style-0 .ndd-marker-border {
+	border: none !important;
+}
+
+/* icons position offsets */
+.ndd-marker-style-5 img {
+	margin-top: -19px;
+}
+.ndd-marker-style-6 img {
+	margin-top: -19px;
+}
+.ndd-marker-style-7 img {
+	margin-top: -19px;
+}
+.ndd-marker-style-8 img {
+	margin-left: 21px;
+	margin-top: -20px;
+}
+.ndd-marker-style-9 img {
+	margin-top: -19px;
+}
+.ndd-marker-style-10 img {
+	margin-top: -19px;
+}
+.ndd-marker-style-11 img {
+	margin-left: -4px;
+	margin-top: -16px;
+}
+.ndd-marker-style-12 img {
+	margin-left: 9px;
+	margin-top: -18px;
+}
+.ndd-marker-style-13 img {
+	margin-left: -1px;
+	margin-top: -17px;
+}
+
+/* RECT SPOT */
+
+.ndd-rect-marker-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*.ndd-rect-marker-container .ndd-rect-marker-main, .ndd-marker-container .ndd-rect-marker-border {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}*/
+
+.ndd-rect-marker-container .ndd-marker-main, .ndd-rect-marker-container .ndd-marker-border {
+	position: absolute;
+}
+
+.ndd-marker-main-wrap, .ndd-marker-border-wrap {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ndd-marker-main-wrap .ndd-marker-main, .ndd-marker-border-wrap .ndd-marker-border {
+	position: relative;
+	left: 0 !important;
+	top: 0 !important;
+}
+
+.ndd-rect-marker-style-1 .ndd-marker-main {
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 100%;
+	opacity: 0.2;
+}
+
+.ndd-rect-marker-style-2 .ndd-marker-main {
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 100%;
+	left: 5px;
+	top: 5px;
+	opacity: 0.2;
+}
+
+.ndd-rect-marker-style-2 .ndd-marker-border {
+	border-radius: 12px;
+	left: 0;
+	top: 0;
+	border: 4px solid black;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ndd-rect-marker-style-3 .ndd-marker-main {
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.2);
+	width: 100%;
+	height: 100%;
+	left: 3px;
+	top: 3px;
+	opacity: 0.2;
+}
+
+.ndd-rect-marker-style-3 .ndd-marker-border {
+	border-radius: 10px;
+	left: 0;
+	top: 0;
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ndd-rect-marker-style-4 .ndd-marker-main {
+	display: none;
+}
+
+.ndd-rect-marker-style-4 .ndd-marker-border {
+	border-radius: 12px;
+	left: 0;
+	top: 0;
+	border: 4px solid black;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.ndd-rect-marker-style-0 .ndd-marker-main {
+	background: transparent !important;
+}
+
+.ndd-rect-marker-style-0 .ndd-marker-border {
+	border: none !important;
+}
+
+.ndd-marker-container, .ndd-rect-marker-container, .ndd-marker-container *, .ndd-rect-marker-container {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

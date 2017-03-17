@@ -1,0 +1,10 @@
+@font-face {
+    font-family: happycole;
+    src: url('happycole/happyzcool.ttf');
+    /*src: url(happycole/happyzcool.eot);*/
+}
+
+.newfont {
+    font-family: happycole;
+    font-size: 24px;
+}

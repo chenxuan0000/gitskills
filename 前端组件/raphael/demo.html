@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="canves"></div>
+    <script type="text/javascript" src="raphael.min.js"></script>
+    <script type="text/javascript">
+    var paper = Raphael("canves", 640, 480);
+    paper.circle(320, 240, 60).animate({
+        fill: "#223fa3",
+        stroke: "#000",
+        "stroke-width": 80,
+        "stroke-opacity": 0.5
+    }, 2000);
+    
+    </script>
+</body>
+
+</html>
