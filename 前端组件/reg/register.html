@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="js/lib/jquery-1.11.0.min.js"></script>
+    <title>用户注册</title>
+</head>
+
+<body>
+    <!-- main -->
+    <div class="ewb-container">
+        <div class="ewb-cm">
+            <div class="ewb-cm-hd clearfix">
+                <a href="#" class="ewb-cm-tt current">
+                    用户注册
+                </a>
+            </div>
+            <!-- 表单 -->
+            <div class="ewb-cm-bd">
+                <form class="ewb-form" name="form" id="registerForm">
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">用户名 <span>*</span></label>
+                        <input type="text" name="userName" class="ewb-form-input l" placeholder="支持字母、数字、下划线组合，需以字母开头，长度为3-20个字符"  value="" />
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">密码 <span>*</span></label>
+                        <div class="ewb-form-spe l">
+                            <input type="password" name="password" id="password" class="ewb-form-input" value=""/>
+                            <div class="ewb-form-safe clearfix">
+                                <span class="ewb-weak l">弱</span>
+                                <span class="ewb-medium l">中</span>
+                                <span class="ewb-strong l">强</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">确认密码 <span>*</span></label>
+                        <input type="password" name="confirmpwd" class="ewb-form-input l"   value="" />
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">注册联系人 <span>*</span></label>
+                        <input type="text" name="contacts" class="ewb-form-input l" placeholder=""  value="" />
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">联系电话 <span>*</span></label>
+                        <input type="text" name="mobile" class="ewb-form-input l" placeholder=""  value="" />
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">固定电话 <span>*</span></label>
+                        <input type="text" name="phone" class="ewb-form-input l" placeholder="" value="" />
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">QQ号 <span>*</span></label>
+                        <input type="text" name="QQ" class="ewb-form-input l" placeholder=""  value="" />
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">邮箱 <span>*</span></label>
+                        <input type="email" name="email" class="ewb-form-input l" placeholder=""  value="" />
+                    </div>
+                    <div class="ewb-form-row clearfix">
+                        <label class="ewb-form-label l">身份证号码 <span>*</span></label>
+                        <input type="text" name="identity" class="ewb-form-input l" placeholder=""  value="" />
+                    </div>
+                    <div class="ewb-form-row">
+                       <div class="ewb-form-checkbox">
+                          <input type="checkbox" name="agree" for="agree" id="agree" />
+                          <label for="agree">我已阅读<span>《用户服务协议》</span></label>
+                       </div> 
+                    </div>
+                    <div class="ewb-form-row">
+                       <div class="ewb-form-checkbox">
+                          <input type="checkbox"  name="topic" value="" />苹果
+                          <input type="checkbox"  name="topic" value="" />香蕉
+                          <input type="checkbox"  name="topic" value="" />橙子
+                       </div> 
+                    </div>
+                    <div class="ewb-form-row">
+                        <button type="submit" name="register" class="ewb-form-btn">注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 页面脚本 -->
+    <script src="js/lib/jquery.placeholder.min.js"></script>
+    <script src="js/lib/jquery.validate.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

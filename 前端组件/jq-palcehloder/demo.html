@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style type="text/css">
+    .demo-input {
+        width: 300px;
+        height: 30px;
+        line-height: 30px;
+        border: 1px solid #ccc;
+        font-size: 13px;
+        padding: 0 6px;
+    }
+    /* 指定placeholder文字颜色 */
+    
+    ::-webkit-input-placeholder
+    /* WebKit browsers */
+    
+    {
+        color: #999;
+    }
+    
+    :-moz-placeholder
+    /* Mozilla Firefox 4 to 18 */
+    
+    {
+        color: #999;
+    }
+    
+    ::-moz-placeholder
+    /* Mozilla Firefox 19+ */
+    
+    {
+        color: #999;
+    }
+    
+    :-ms-input-placeholder
+    /* Internet Explorer 10+ */
+    
+    {
+        color: #999;
+    }
+    
+    .placeholder
+    /* Internet Explorer 9- */
+    
+    {
+        color: #999;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="输入用户名" class="demo-input" id="demo">
+    <script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="jquery.placeholder.min.js"></script>
+    <script type="text/javascript">
+    // 给具有placeholder属性的元素增加此支持
+    $('[placeholder]').placeholder();
+    </script>
+</body>
+
+</html>

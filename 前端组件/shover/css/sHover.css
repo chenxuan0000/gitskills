@@ -1,0 +1,46 @@
+.ewb-container {
+    width: 585px;
+    margin: 20px auto;
+    background: powderblue;
+}
+
+.ewb-hover-item {
+    width: 260px;
+    height: 180px;
+    margin: 10px;
+    float: left;
+    font-family: "arial";
+    border: 6px solid #ccc;
+}
+
+.ewb-hover-item img {
+    width: 260px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.ewb-hover-intro {
+    background-color: rgb(235, 137, 112);
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.ewb-hover-intro h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px dashed #fff;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.ewb-hover-intro p {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    margin: 0 10px;
+    padding: 10px;
+    color: #438199;
+}
+

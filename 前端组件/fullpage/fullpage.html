@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>fullPage绑定菜单演示</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="fullpage.css">
+    <script src="jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <ul id="menu" class="ewb-menu">
+        <li data-menuanchor="page1" class="active">
+            <a href="#page1">第一屏</a>
+        </li>
+        <li data-menuanchor="page2">
+             <a href="#page2">第二屏</a>
+        </li>
+        <li data-menuanchor="page3">
+             <a href="#page3">第三屏</a>
+        </li>
+        <li data-menuanchor="page4">
+             <a href="#page4">第四屏</a>
+        </li>
+    </ul>
+    <div id="fullpage">
+        <div class="ewb-section">
+            <h5>第一屏</h5>
+            <p>fullPage.js — 绑定菜单演示</p>
+        </div>
+        <div class="ewb-section">
+            <h5>第二屏</h5>
+            <p>请查看左上角，点击可以控制</p>
+        </div>
+        <div class="ewb-section">
+            <h5>第三屏</h5>
+            <p>绑定的菜单没有默认的样式，你需要自行编写</p>
+        </div>
+        <div class="ewb-section">
+            <h5>第四屏</h5>
+            <p>这是最后一屏</p>
+        </div>
+    </div>
+    <script src="jquery.fullPage.min.js"></script>
+    <script>
+    (function(win, $) {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            menu: '#menu',
+            sectionSelector:'.ewb-section',
+            scrollingSpeed: 500
+        });
+    }(this, jQuery));
+    </script>
+</body>
+
+</html>

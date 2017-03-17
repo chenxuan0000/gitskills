@@ -1,0 +1,44 @@
+/*!
+* fullpage全屏滚动 
+**/
+
+.ewb-menu {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 70;
+}
+
+.ewb-menu li {
+    float: left;
+    margin: 0 10px 0 0;
+    font-size: 14px;
+}
+
+.ewb-menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.ewb-menu .active a {
+    color: #fff;
+    background-color: #333;
+}
+
+.ewb-section {
+    text-align: center;
+    font: 50px "Microsoft Yahei";
+    color: #fff;
+    display: table;
+    table-layout:fixed;
+    width: 100%;
+}
+
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
