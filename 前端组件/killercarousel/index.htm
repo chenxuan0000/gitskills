@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Killer Carousel Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+
+
+    <script src="jquery-1.11.0.min.js"></script>
+    <link href="killercarousel.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="killercarousel.js"></script>
+    <style type="text/css">
+        .kc-item img
+        {
+            position: absolute;
+            pointer-events: none;
+            width: 100%;
+            box-shadow: rgba(0,0,0,0.4) 0 1px 4px;
+            border: 1px solid #bebebe;
+        }
+
+        .kc-wrap > div:nth-child(2)
+        {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $('.kc-wrap').KillerCarousel({
+                width: 860,
+                spacing3d: 150,
+                spacing2d: 150,
+                infiniteLoop: true
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <div id="wrapper" style="width:860px;">
+        <div class="kc-wrap">
+            <div class="kc-item">
+                <img src="images/image3.jpg" alt="房产过户">
+            </div>
+            <div class="kc-item">
+                <img src="images/image4.jpg" alt="新房办证">
+            </div>
+            <div class="kc-item">
+                <img src="images/image5.jpg" alt="开药店">
+            </div>
+            <div class="kc-item">
+                <img src="images/image3.jpg" alt="房产过户">
+            </div>
+            <div class="kc-item">
+                <img src="images/image4.jpg" alt="新房办证">
+            </div>
+            <div class="kc-item">
+                <img src="images/image5.jpg" alt="开药店">
+            </div>
+            <div class="kc-item">
+                <img src="images/image1.jpg" alt="开餐馆">
+            </div>
+            <div class="kc-item">
+                <img src="images/image2.jpg" alt="开网吧">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

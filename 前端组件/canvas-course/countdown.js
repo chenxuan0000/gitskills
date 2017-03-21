@@ -4,7 +4,8 @@ var RADIUS = 8;
 var MARGIN_TOP = 60;
 var MARGIN_LEFT = 30;
 
-const endTime = new Date(2017,1,21,15,33,52);
+const endTime = new Date(2017,2,21,15,33,52);
+console.log(endTime)
 var curShowTimeSeconds = 0
 
 var balls = [];
@@ -32,7 +33,7 @@ function getCurrentShowTimeSeconds() {
     var curTime = new Date();
     var ret = endTime.getTime() - curTime.getTime();
     ret = Math.round( ret/1000 )
-
+    // console.log(ret)
     return ret >= 0 ? ret : 0;
 }
 

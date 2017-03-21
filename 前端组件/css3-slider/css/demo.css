@@ -1,0 +1,85 @@
+﻿/*section*/
+
+.padding-css3 {
+    padding: 30px 40px;
+}
+
+.css3Slider {
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    perspective: 1400px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateZ( -288px) rotateY(0deg);
+    }
+    100% {
+        transform: translateZ( -288px) rotateY(360deg);
+    }
+}
+
+.figure-father {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateZ( -603.5px);
+    transform-style: preserve-3d;
+    /*transition: transform 1s;*/
+    animation: scroll 12s infinite;
+}
+
+.figure-father:hover {
+    animation-play-state: paused;
+}
+
+.figure-father>figure {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    border: 2px solid black;
+}
+
+.figure-father>figure>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.figure-father>:nth-child(1) {
+    transform: rotateY( 0deg) translateZ( 603.5px);
+}
+
+.figure-father>:nth-child(2) {
+    transform: rotateY( 45deg) translateZ( 603.5px);
+}
+
+.figure-father>:nth-child(3) {
+    transform: rotateY( 90deg) translateZ( 603.5px);
+}
+
+.figure-father>:nth-child(4) {
+    transform: rotateY( 135deg) translateZ( 603.5px);
+}
+
+.figure-father>:nth-child(5) {
+    transform: rotateY( 180deg) translateZ( 603.5px);
+}
+
+.figure-father>:nth-child(6) {
+    transform: rotateY( 225deg) translateZ( 603.5px);
+}
+
+.figure-father>:nth-child(7) {
+    transform: rotateY( 270deg) translateZ( 603.5px);
+}
+
+.figure-father>:nth-child(8) {
+    transform: rotateY( 315deg) translateZ( 603.5px);
+}
