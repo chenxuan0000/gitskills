@@ -91,6 +91,7 @@
         if (opts.swiftMove) {
             // pan设置左右触屏滚动
             new Hammer($father[0]).on("panmove", function(ev) {
+                ev.preventDefault();
                 var floor = Math.floor((ev.deltaX) / 225),
                     floor1 = floor * 45,
                     x = swiftDeg + rotateYDeg + floor1;
@@ -100,10 +101,6 @@
                 });
             }).on("panend", function(ev) {
                 swiftDeg = swiftDeg + Math.floor((ev.deltaX) / 225) * 45;
-            });
-            // Pinch设置视角perspective
-            new Hammer($father[0]).on("pinchin", function(ev) {
-               alert(7777);
             });
         }
 
