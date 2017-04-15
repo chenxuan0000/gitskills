@@ -1,3 +1,7 @@
+/*
+ **auther :chenxuan
+ **date : 2017-4-15
+ */
 (function($) {
     $.fn.css3Slider = function(options) {
         var opts = $.extend({}, $.fn.css3Slider.defaults, options),
@@ -18,6 +22,7 @@
         $father.height(opts.containerHeight)
             .width(opts.containerWidth)
             .css('perspective', opts.perspective + 'px');
+        $children.css("transform", " translateZ( -" + translateZ + "px)");
         $grandson.each(function(i, e) {
             e.style.transform = 'rotateY( ' + i * deg + 'deg) translateZ( ' + translateZ + 'px)';
         });
@@ -82,9 +87,10 @@
             $children.on("click", ".animation-child", clickFront);
         };
 
-        // Hammer pan
+        // Hammer 
         if (opts.swiftMove) {
-            new Hammer($children[0]).on("panmove", function(ev) {
+            // pan设置左右触屏滚动
+            new Hammer($father[0]).on("panmove", function(ev) {
                 var floor = Math.floor((ev.deltaX) / 225),
                     floor1 = floor * 45,
                     x = swiftDeg + rotateYDeg + floor1;
@@ -95,7 +101,10 @@
             }).on("panend", function(ev) {
                 swiftDeg = swiftDeg + Math.floor((ev.deltaX) / 225) * 45;
             });
-
+            // Pinch设置视角perspective
+            new Hammer($father[0]).on("pinch", function(ev) {
+               alert(1111)
+            });
         }
 
     };
