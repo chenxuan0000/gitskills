@@ -102,7 +102,7 @@
                 swiftDeg = swiftDeg + Math.floor((ev.deltaX) / 225) * 45;
             });
             // Pinch设置视角perspective
-            new Hammer($father[0]).on("pinup", function(ev) {
+            new Hammer($father[0]).on("panmove", function(ev) {
                alert(222);
             });
         }
