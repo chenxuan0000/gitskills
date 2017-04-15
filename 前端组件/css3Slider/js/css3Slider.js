@@ -103,7 +103,7 @@
             });
             // Pinch设置视角perspective
             new Hammer($father[0]).on("pinchin", function(ev) {
-               alert(222);
+               alert(1111);
             });
         }
 
