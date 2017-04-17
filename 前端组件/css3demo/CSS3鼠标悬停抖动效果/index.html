@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css3晃动效果</title>
+    <style>
+    .lanren {
+        margin: 100px auto;
+        width: 100px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #CCC;
+        border-radius: 2px;
+    }
+    
+    .lanren:hover {
+        /*animation: shake 1s infinite;*/
+        animation: shake 1s;
+    }
+    
+    @keyframes shake {
+        10%,
+        90% {
+            transform: translate3d(-1px, 0, 0);
+        }
+        20%,
+        80% {
+            transform: translate3d(2px, 0, 0);
+        }
+        30%,
+        50%,
+        70% {
+            transform: translate3d(-4px, 0, 0);
+        }
+        40%,
+        60% {
+            transform: translate3d(4px, 0, 0);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="lanren">Hover Me</div>​
+</body>
+
+</html>
