@@ -63,15 +63,19 @@ html{
 }
 /* 好了，我开始装逼了 */
 `;
-var html1 = '',
-	n = 0,
-	$style = $('#style'),
-	$content = $('#content');
-setInterval(function(){
-	$style.html(txt.substring(0,n));
-	$content.html(txt.substring(0,n));
-	n++;
-},50)
+    var timer,
+        n = 0,
+        $style = $('#style'),
+        $content = $('#content');
+    timer = setInterval(function() {
+        $style.html(txt.substring(0, n));
+        $content.html(txt.substring(0, n));
+        if (n === txt.length) {
+            clearInterval(timer);
+        }
+        $content.scrollTop(1000)
+        n++;
+    }, 50)
     </script>
 </body>
 
